@@ -1289,6 +1289,10 @@ transform notify_appear:
     on hide:
         linear .5 alpha 0.0
 
+#Positions splash text correctly
+
+transform splash_text:
+    yalign 0.7
 
 style notify_frame is empty
 style notify_text is gui_text

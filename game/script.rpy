@@ -6,6 +6,25 @@
 define e = Character("Eileen")
 
 
+# Splash Screen
+image splash = "splashlogo.png"
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    play sound "fishcough.mp3"
+
+    show splash at truecenter with dissolve
+    show text "Smoking Fish Productions" at splash_text
+
+    with Pause(3)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
+
 # The game starts here.
 
 label start:
