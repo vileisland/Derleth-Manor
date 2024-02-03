@@ -72,11 +72,7 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
-##Style for the custom sidebar screen
-
-style sidebar:
-    background Frame("gui/sidebar.png", gui.sidebar_frame_borders)
-    
+ 
 
 
 ################################################################################
@@ -98,7 +94,6 @@ style sidebar:
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
 screen say(who, what):
-    use sidebar
     style_prefix "say"
     window:
         id "window"
@@ -164,17 +159,13 @@ style say_dialogue:
 
     adjust_spacing False
 
-##Custom Sidebar Screen
-##
-##This screen is in progress and will display character stats
+# Custom CRT Overlay - Marlene
+screen crtoverlay:
+    image "gui/crtoverlay.png"
+    zorder 100
+    modal False
 
-screen sidebar:
-    frame:
-        xsize 325
-        ysize 1000
-        xalign 0.005
-        yalign  0.5
-        text "Name\nScore\n\nHealth\nSanity\nHunger"
+
 
 ## Input screen ################################################################
 ##
@@ -301,11 +292,17 @@ style choice_button_text is default:
 
 screen navigation():
 
+    add crt
+
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+
+        else:
+            xoffset 120
+        yalign 0.8
 
         spacing gui.navigation_spacing
 
@@ -354,6 +351,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    xalign 0.5
 
 
 ## Main Menu screen ############################################################
@@ -362,12 +360,16 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+
+define crt = "gui/crtoverlay.png"
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
 
     add gui.main_menu_background
+    add crt
 
     ## This empty frame darkens the main menu.
     frame:
@@ -399,7 +401,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -428,6 +430,8 @@ style main_menu_version:
 ## transcluded (placed) inside it.
 
 screen game_menu(title, scroll=None, yinitial=0.0):
+
+    add crt
 
     style_prefix "game_menu"
 
@@ -1623,3 +1627,10 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+## Custom transforms
+
+transform topmiddle:
+    xalign 0.5
+    yalign 0.3

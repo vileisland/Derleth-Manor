@@ -165,7 +165,7 @@ define gui.button_text_size = gui.interface_text_size
 
 ## The color of button text in various states.
 define gui.button_text_idle_color = gui.idle_color
-define gui.button_text_hover_color = gui.hover_color
+define gui.button_text_hover_color = "#ffffff"
 define gui.button_text_selected_color = gui.selected_color
 define gui.button_text_insensitive_color = gui.insensitive_color
 
@@ -284,19 +284,16 @@ define gui.main_menu_text_xalign = 1.0
 ## components when an overlay or window is not present.
 
 ## Generic frames.
-define gui.frame_borders = Borders(22, 80, 58, 24)
+define gui.frame_borders = Borders(58, 90, 58, 24)
 
 ## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(22, 80, 58, 24)
+define gui.confirm_frame_borders = Borders(58, 90, 58, 24)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(22, 80, 58, 24)
+define gui.skip_frame_borders = Borders(58, 90, 58, 24)
 
 ## The frame that is used as part of the notify screen.
-define gui.notify_frame_borders = Borders(22, 80, 58, 24)
-
-## The frame that is used as part of the sidebar screen.
-define gui.sidebar_frame_borders = Borders(22, 80, 58, 24)
+define gui.notify_frame_borders = Borders(58, 90, 58, 24)
 
 ## Should frame backgrounds be tiled?
 define gui.frame_tile = False
