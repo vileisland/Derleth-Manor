@@ -1,13 +1,11 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define c = Character("Clairvoyant", image="cportrait/clairvoyant.png")
-
 # Splash Screen
 image splash = "splashlogo.png"
 image desktopbg = "desktopbackground.png"
+
+#Location images
+image mainhallway = "locations/mainhall.png"
 
 label splashscreen:
     scene black
@@ -40,14 +38,41 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-
-    show clairvoyant at topmiddle
-
+    show mainhall at backgroundpos
+    
     # These display lines of dialogue.
 
-    c "You've created a new Ren'Py game."
+    cl "You've created a new Ren'Py game."
 
-    c "Once you add a story, pictures, and music, you can release it to the world! Once you add a story, pictures, and music, you can release it to the world! Once you add a story, pictures, and music, you can release it to the world! Once you add a story, pictures, and music, you can release it to the world!"
+    show cl at characterpos
+
+    cl "Clairvoyant test"
+    hide cl
+
+    show s at characterpos
+
+    s "Scholar test"
+    hide s
+
+    show p at characterpos
+
+    p "Priest test"
+    hide p
+
+    show i at characterpos
+
+    i "Investigator test"
+    hide i
+
+    show ca at characterpos
+
+    ca "Caretaker test"
+    hide ca
+
+    show j at characterpos
+
+    j "Journalist test"
+    hide j
 
     # This ends the game.
 

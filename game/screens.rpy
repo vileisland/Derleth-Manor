@@ -1631,6 +1631,10 @@ style slider_slider:
 
 ## Custom transforms
 
-transform topmiddle:
+transform characterpos:
     xalign 0.5
-    yalign 0.3
+    yalign 0.36
+
+transform backgroundpos:
+    xalign 0.5
+    yalign 0.2
