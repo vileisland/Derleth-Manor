@@ -71,3 +71,12 @@ default j_cha = 7
 default j_per = 7
 default j_luck = 3
 default j_HP = 80
+
+#Character define
+default charclass = ""
+default strg = 5
+default dex = 5
+default cha = 5
+default per = 5
+default luck = 5
+default HP = 100
