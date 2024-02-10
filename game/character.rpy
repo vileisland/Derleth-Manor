@@ -80,3 +80,4 @@ default cha = 5
 default per = 5
 default luck = 5
 default HP = 100
+default aggression = 0
