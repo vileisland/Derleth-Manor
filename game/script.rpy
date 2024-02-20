@@ -1,8 +1,7 @@
 ﻿
 image desktopbg = "desktopbackground.png"
-
-#Location images
-image mainhallway = "locations/mainhall.png"
+image splash = "splashlogo.png"
+image fmv = Movie(play="fmv.mpeg")
 
 label splashscreen:
     scene black
@@ -12,13 +11,17 @@ label splashscreen:
 
     play sound "fishcough.mp3"
 
-    show splashlogo at truecenter with dissolve
-    show text "Smoking Fish Productions" at splash_text
+    show splash at truecenter with dissolve
+    show text "{color=#fff}Smoking Fish Productions" at splash_text with dissolve
 
     with Pause(3)
 
     scene black with dissolve
     with Pause(1)
+
+    show fmv at truecenter:
+        zoom 1.5
+    with Pause(14.5)
 
     return
 
@@ -35,6 +38,8 @@ label start:
     #This shows a background image, it must be at background pos to align correctly
     show maingate at backgroundpos
     with dissolve
+    $ inv = Inventory([], 0)
+    show screen hud
     "You stand before the iron gates of Derleth Manor, a gloomy mansion hidden in the woods near Arkham, Massachusetts. You have been hired to solve the mystery of what happened to August Derleth, the famous explorer who vanished without a trace."
     "A week ago, a mysterious man who called himself Sinclair Lewis approached you with an urgent plea for your assistance regarding Derleth. Lewis claimed to have learned of your expertise in dealing with occult phenomena, thanks to your reputation as a..."
     menu:
@@ -45,7 +50,8 @@ label start:
             $ cha = s_cha
             $ per = s_per
             $ luck = s_luck
-            $ HP = s_HP
+            $ baseHP = s_HP
+            $ currentHP = s_HP
             jump sinclair_conversation
         "...renowned clairvoyant with the gift of second sight":
             $ charclass = "clairvoyant"
@@ -54,7 +60,8 @@ label start:
             $ cha = cl_cha
             $ per = cl_per
             $ luck = cl_luck
-            $ HP = cl_HP
+            $ baseHP = cl_HP
+            $ currentHP = cl_HP
             jump sinclair_conversation    
         "...famed exorcist of the Arkham diocese":
             $ charclass = "priest"
@@ -63,7 +70,8 @@ label start:
             $ cha = p_cha
             $ per = p_per
             $ luck = p_luck
-            $ HP = p_HP
+            $ baseHP = p_HP
+            $ currentHP = p_HP
             jump sinclair_conversation                
         "...esteemed investigator of the paranormal":
             $ charclass = "investigator"
@@ -72,7 +80,8 @@ label start:
             $ cha = i_cha
             $ per = i_per
             $ luck = i_luck
-            $ HP = i_HP
+            $ baseHP = i_HP
+            $ currentHP = i_HP
             jump sinclair_conversation    
         "...fearless investigative journalist":
             $ charclass = "journalist"
@@ -81,7 +90,8 @@ label start:
             $ cha = j_cha
             $ per = j_per
             $ luck = j_luck
-            $ HP = j_HP
+            $ baseHP = j_HP
+            $ currentHP = j_HP
             jump sinclair_conversation    
 
 label sinclair_conversation:
@@ -138,7 +148,7 @@ label maingate:
             jump front
         "...to climb the gate." if (gate_fail == False and strg <= 5):
             "Right when you think you're on the verge of clearing the gate, you tumble down with a resounding thud."
-            $ HP - 2
+            $ currentHP - 2
             $ renpy.notify("Lost 2 HP.")
             $ gate_fail = True
             jump maingate
@@ -148,8 +158,9 @@ label maingate:
             jump front
         "... to ram the gate down!" if (ram_fail == False and strg < 7):
             "You hurl yourself at the gate with full confidence in your ability to bring it down. Guess what? This isn't an action game, all you manage to do is bruise your ribs."
-            $ HP - 5
+            $ currentHP - 5
             $ renpy.notify("Lost 5 HP.")
+            $ ram_fail = True
             jump maingate
         "...to look for an alternate route." if (search_fail == False and per > 5):
             "You discover a narrow opening in the bushes, guiding you to a large gap in the fence. You crawl through it, albeit at the expense of your dignity"
@@ -470,3 +481,7 @@ label sceanceroom:
 
     "This is the sceance room."
     jump attic
+
+label use_item(item):
+    $ item.use()
+    return

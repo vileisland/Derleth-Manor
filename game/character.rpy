@@ -72,12 +72,16 @@ default j_per = 7
 default j_luck = 3
 default j_HP = 80
 
-#Character define
-default charclass = ""
-default strg = 5
-default dex = 5
-default cha = 5
-default per = 5
-default luck = 5
-default HP = 100
-default aggression = 0
+init python:
+    #Character define
+    charclass = ""
+    strg = 5
+    dex = 5
+    cha = 5
+    per = 5
+    luck = 5
+    baseHP = 100
+    aggression = 0
+    currentHP = 100
+    basesanity = 100
+    currentsanity = 100
