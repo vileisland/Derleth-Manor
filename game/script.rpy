@@ -26,7 +26,7 @@ label splashscreen:
     return
 
 # The game starts here.
-
+$ minimap = False
 label start:
     #This stops the main menu music from playing indefinitely
     stop music
@@ -34,7 +34,7 @@ label start:
     show screen crtoverlay
     #scene should always be desktopbg
     scene desktopbg
-
+    $ minimap = False
     #This shows a background image, it must be at background pos to align correctly
     show maingate at backgroundpos
     with dissolve
@@ -98,6 +98,7 @@ label sinclair_conversation:
     show screen crtoverlay
     scene desktopbg
     show sinclairoffice at backgroundpos
+    $ minimap = False
     with dissolve
     "On that day, Lewis had barged into your office, and began to plead with you."
     show sinclair at characterpos
@@ -129,6 +130,7 @@ label maingate:
     scene desktopbg
     show maingate at backgroundpos
     with dissolve
+    $ minimap = False
 
     #Precautionary failstate, as is no characters can fail this scene
     if (slip_fail == True and gate_fail == True and gate_fail == True and search_fail == True):
@@ -154,7 +156,7 @@ label maingate:
             jump maingate
         "...to ram the gate down!" if (ram_fail == False and strg >= 7):
             "You slam your powerful form against the gate, sending it crashing to the ground. You dust yourself off and head towards the manor. Are you proud of yourself?"
-            $ agression + 2
+            $ aggression + 2
             jump front
         "... to ram the gate down!" if (ram_fail == False and strg < 7):
             "You hurl yourself at the gate with full confidence in your ability to bring it down. Guess what? This isn't an action game, all you manage to do is bruise your ribs."
@@ -176,6 +178,7 @@ label front:
     scene desktopbg
     show front at backgroundpos
     with dissolve
+    $ minimap = False
 
     "As you approach the grand manor, you notice an eerie sight: every window glows with an unnatural light. The closer you step, the more the air thickens, and a primal fear creeps up your spine. You dismiss it as mere imagination and push open the creaking front door."
     jump mainhall
@@ -185,8 +188,9 @@ label mainhall:
     default flee_attempt = False
     show screen crtoverlay
     scene desktopbg
-    show mainhall at backgroundpos
+    show bg mainhall at backgroundpos
     with dissolve
+    $ minimap = True
     if (first_mainhall_visit == True):
         "As you step through the threshold, the door slams shut behind you."
     "This is the main hall. You can go to the west hallway, or the east hallway."
@@ -206,8 +210,9 @@ label mainhall:
 label westhall:
     show screen crtoverlay
     scene desktopbg
-    show westhall at backgroundpos
+    show bg westhall at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the west hallway. There are two doors to your left, two to your right, and on down the hall."
     menu:
@@ -227,8 +232,13 @@ label westhall:
 label kitchen:
     show screen crtoverlay
     scene desktopbg
-    show kitchen at backgroundpos
+    show bg kitchen at backgroundpos
     with dissolve
+    $ minimap = True
+    $ currentHP - 50
+    $ inv.add_item(beans)
+    $ inv.add_item(roastbeef)
+    $ inv.add_item(parfait)
 
     "This is the kitchen. The fridge is wide open."
     jump westhall
@@ -236,8 +246,9 @@ label kitchen:
 label parlor:
     show screen crtoverlay
     scene desktopbg
-    show parlor at backgroundpos
+    show bg parlor at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the parlor. It's a mess."
     jump westhall
@@ -245,8 +256,9 @@ label parlor:
 label diningroom:
     show screen crtoverlay
     scene desktopbg
-    show diningroom at backgroundpos
+    show bg diningroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the dining room."
     jump westhall
@@ -254,8 +266,10 @@ label diningroom:
 label servantsquarters:
     show screen crtoverlay
     scene desktopbg
-    show servantsquarters at backgroundpos
+    show bg servantsquarters at backgroundpos
     with dissolve
+    $ minimap = True
+
 
     "You are in the servants quarters. There are two doors that lead off to the side."
     menu:
@@ -269,8 +283,9 @@ label servantsquarters:
 label servantsbedroom:
     show screen crtoverlay
     scene desktopbg
-    show servantsbedroom at backgroundpos
+    show bg servantsbedroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the servants bedroom. There is strange writing on the walls."
     jump servantsquarters
@@ -278,8 +293,9 @@ label servantsbedroom:
 label storageroom:
     show screen crtoverlay
     scene desktopbg
-    show storageroom at backgroundpos
+    show bg storageroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the storage room."
     jump servantsquarters
@@ -287,8 +303,9 @@ label storageroom:
 label greenhouse:
     show screen crtoverlay
     scene desktopbg
-    show greenhouse at backgroundpos
+    show bg greenhouse at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the greenhouse."
     menu:
@@ -300,8 +317,9 @@ label greenhouse:
 label garden:
     show screen crtoverlay
     scene desktopbg
-    show garden at backgroundpos
+    show bg garden at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You reach the garden."
     menu:
@@ -315,8 +333,9 @@ label garden:
 label shed:
     show screen crtoverlay
     scene desktopbg
-    show shed at backgroundpos
+    show bg shed at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the shed."
     jump garden
@@ -324,8 +343,9 @@ label shed:
 label graveyard:
     show screen crtoverlay
     scene desktopbg
-    show graveyard at backgroundpos
+    show bg graveyard at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the graveyard. Spoooky!"
     jump garden
@@ -334,8 +354,9 @@ label graveyard:
 label easthall:
     show screen crtoverlay
     scene desktopbg
-    show easthall at backgroundpos
+    show bg easthall at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the east hallway. There are two doors to your left and one to your right. There is a staircase leading upstairs at the ened of the hall."
     menu:
@@ -353,8 +374,9 @@ label easthall:
 label bathroom:
     show screen crtoverlay
     scene desktopbg
-    show bathroom at backgroundpos
+    show bg bathroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the bathroom"
     jump easthall
@@ -362,8 +384,9 @@ label bathroom:
 label study:
     show screen crtoverlay
     scene desktopbg
-    show study at backgroundpos
+    show bg study at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the study."
     jump easthall
@@ -371,8 +394,9 @@ label study:
 label barroom:
     show screen crtoverlay
     scene desktopbg
-    show barroom at backgroundpos
+    show bg barroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the bar room."
     jump easthall
@@ -383,6 +407,7 @@ label eastupstairs:
     scene desktopbg
     show eastupstairs at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the upstairs east hallway. There are two doors on each side of you and a door in front of you."
     menu:
@@ -396,12 +421,15 @@ label eastupstairs:
             jump musicroom
         "Go to the ballroom":
             jump ballroom
+        "Return to the first floor":
+            jump easthall
 
 label bedroom:
     show screen crtoverlay
     scene desktopbg
     show bedroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "The master bedroom."
     jump eastupstairs
@@ -411,6 +439,7 @@ label nursery:
     scene desktopbg
     show nursery at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the nursery."
     jump eastupstairs
@@ -420,6 +449,7 @@ label secondbedroom:
     scene desktopbg
     show secondbedroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the guest room."
     jump eastupstairs
@@ -429,6 +459,7 @@ label musicroom:
     scene desktopbg
     show musicroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the music room."
     jump eastupstairs
@@ -438,6 +469,7 @@ label ballroom:
     scene desktopbg
     show ballroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the ballroom."
     menu:
@@ -452,6 +484,7 @@ label westupstairs:
     scene desktopbg
     show westupstairs at backgroundpos
     with dissolve
+    $ minimap = True
 
     "There are two doors here. I haven't thought of any locations for them. Ignore them. There is a ladder to the attic ahead of you."
     menu:
@@ -465,6 +498,7 @@ label attic:
     scene desktopbg
     show attic at backgroundpos
     with dissolve
+    $ minimap = True
 
     "You are in the attic. There is a door in front of you."
     menu:
@@ -478,6 +512,7 @@ label sceanceroom:
     scene desktopbg
     show sceanceroom at backgroundpos
     with dissolve
+    $ minimap = True
 
     "This is the sceance room."
     jump attic

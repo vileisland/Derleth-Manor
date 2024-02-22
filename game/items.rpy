@@ -53,7 +53,7 @@ init python:
             if (currentHP > baseHP):
                 currentHP = baseHP
             renpy.show(self.image, at_list=[self.transform])
-            renpy.say("", what=f"Used {self.name}, it restored your health by {self.healpts}. Your health is now {currentHP}.)
+            renpy.say("", what=f"Used {self.name}, it restored your health by {self.healpts}. Your health is now {currentHP}.")
             renpy.hide(self.image)
             inv.items.remove(item)
 

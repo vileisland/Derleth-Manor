@@ -1,34 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 45, in script call
-    "You stand before the iron gates of Derleth Manor, a gloomy mansion hidden in the woods near Arkham, Massachusetts. You have been hired to solve the mystery of what happened to August Derleth, the famous explorer who vanished without a trace."
-  File "game/script.rpy", line 488, in script
-    $ item.use()
-  File "game/script.rpy", line 488, in <module>
-    $ item.use()
-  File "game/items.rpy", line 71, in use
-    self.items.remove(item)
-AttributeError: 'Heal' object has no attribute 'items'
+  File "game/script.rpy", line 159, in script
+    $ agression + 2
+  File "game/script.rpy", line 159, in <module>
+    $ agression + 2
+NameError: name 'agression' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 45, in script call
-    "You stand before the iron gates of Derleth Manor, a gloomy mansion hidden in the woods near Arkham, Massachusetts. You have been hired to solve the mystery of what happened to August Derleth, the famous explorer who vanished without a trace."
-  File "game/script.rpy", line 488, in script
-    $ item.use()
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+  File "game/script.rpy", line 159, in script
+    $ agression + 2
+  File "C:\Users\marle\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+  File "C:\Users\marle\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 488, in <module>
-    $ item.use()
-  File "game/items.rpy", line 71, in use
-    self.items.remove(item)
-AttributeError: 'Heal' object has no attribute 'items'
+  File "game/script.rpy", line 159, in <module>
+    $ agression + 2
+NameError: name 'agression' is not defined
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.1.3.23091805
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.2.0.24012702
 Derleth Manor 1.0
-Tue Feb 20 15:42:15 2024
+Wed Feb 21 14:42:00 2024
