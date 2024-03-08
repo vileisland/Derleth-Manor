@@ -235,10 +235,7 @@ label kitchen:
     show bg kitchen at backgroundpos
     with dissolve
     $ minimap = True
-    $ currentHP - 50
-    $ inv.add_item(beans)
-    $ inv.add_item(roastbeef)
-    $ inv.add_item(parfait)
+    call battle(tonysoprano)
 
     "This is the kitchen. The fridge is wide open."
     jump westhall
@@ -520,3 +517,85 @@ label sceanceroom:
 label use_item(item):
     $ item.use()
     return
+
+##Battle labels - Marlene
+
+label dice_roll:
+    $ d4 = renpy.random.randint(1, 4)
+    $ d6 = renpy.random.randint(1, 6)
+    $ d10 = renpy.random.randint(1, 10)
+    $ d20 = renpy.random.randint(1, 20)
+    return
+
+label battle(enemy):
+    $ player_attack = 0
+    $ enemyHP = enemy.HP
+    $ enemyMaxHP = enemy.HP
+    $ enemy.show_image()
+    "Suprise attack!"
+    "[enemy.name] lunges at you."
+    show screen hp_bars_1v1
+
+    while currentHP > 0 and enemyHP > 0:
+        call dice_roll
+        menu:
+            "Light Attack":
+                if d10 >= 7:
+                    $ player_attack = d4 + d6
+                    $ enemyHP -= player_attack
+                    "Critical Hit! [player_attack] damage to [enemy.name]!"
+                else:
+                    $ enemyHP -= d4
+                    "[d4] damage dealt."
+            "Heavy Attack":
+                if d10 >= 8:
+                    $ player_attack = (d6 + d4)*2
+                    $ enemyHP -= player_attack
+                    "Massive Damage! [player_attack] damage. [enemy.name] looks dazed."
+                elif d10 >= 5:
+                    $ player_attack = d6 + 2
+                    $ enemyHP -= player_attack
+                    "Critical Hit! [player_attack] damage to [enemy.name]!"
+                else:
+                    "[enemy.name] dodges the attack."
+
+        if enemyHP <= 0:
+            "[enemy.name] defeated!"
+            $ enemy.hide_image() 
+            hide screen hp_bars_1v1
+            return
+
+        call dice_roll
+
+        if d20 >= 19:
+            $ currentHP -= d10
+            "[enemy.name] makes a wild attack for [d10] damage!"
+        else:
+            $ currentHP -= d6
+            "[enemy.name] attacks for [d6] damage."
+    ## while loop exit, game over
+    "Your vision goes black, your body feels cold. This is where your journey ends."
+    hide screen hp_bars_1v1
+    scene black with fade
+    $ MainMenu(confirm=False)()
+
+screen hp_bars_1v1:
+
+    vbox:
+        spacing 20
+        xalign 0.15
+        yalign 0.2
+        xmaximum 300
+        text "Player"
+        bar value currentHP range baseHP
+    vbox:
+        spacing 20
+        xalign 0.15
+        yalign 0.4
+        xmaximum 300
+        text "Enemy"
+        bar value enemyHP range enemyMaxHP
+
+
+
+
