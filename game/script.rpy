@@ -246,6 +246,7 @@ label parlor:
     show bg parlor at backgroundpos
     with dissolve
     $ minimap = True
+    call battle(owlman)
 
     "You are in the parlor. It's a mess."
     jump westhall
@@ -527,13 +528,17 @@ label dice_roll:
     $ d20 = renpy.random.randint(1, 20)
     return
 
+init: 
+    $ combat_start = renpy.random.choice (["lunges at", "stomps over to", "crawls toward", "runs at", "stares menacingly at"])
+
 label battle(enemy):
     $ player_attack = 0
     $ enemyHP = enemy.HP
     $ enemyMaxHP = enemy.HP
+    $ enemyHasHealed = False
     $ enemy.show_image()
     "Suprise attack!"
-    "[enemy.name] lunges at you."
+    "[enemy.name] [combat_start] you."
     show screen hp_bars_1v1
 
     while currentHP > 0 and enemyHP > 0:
@@ -541,23 +546,33 @@ label battle(enemy):
         menu:
             "Light Attack":
                 if d10 >= 7:
-                    $ player_attack = d4 + d6
+                    $ player_attack = (d4 + d6) + dex
                     $ enemyHP -= player_attack
                     "Critical Hit! [player_attack] damage to [enemy.name]!"
                 else:
-                    $ enemyHP -= d4
+                    $ enemyHP -= d4 + dex
                     "[d4] damage dealt."
             "Heavy Attack":
                 if d10 >= 8:
-                    $ player_attack = (d6 + d4)*2
+                    $ player_attack = (d6 + d4) + strg
                     $ enemyHP -= player_attack
                     "Massive Damage! [player_attack] damage. [enemy.name] looks dazed."
                 elif d10 >= 5:
-                    $ player_attack = d6 + 2
+                    $ player_attack = (d6 + 2) + strg
                     $ enemyHP -= player_attack
                     "Critical Hit! [player_attack] damage to [enemy.name]!"
                 else:
                     "[enemy.name] dodges the attack."
+            "Skip Fight":
+                $ enemyHP = 0
+            "Pass":
+                "You do nothing."
+
+        if enemyHP > 0 and enemyHP < 20:
+            if enemyHasHealed is False:
+                "[enemy.name] healed themselves using [enemy.healingMove]!"
+                $ enemyHP += 10
+                $ enemyHasHealed = True
 
         if enemyHP <= 0:
             "[enemy.name] defeated!"
@@ -568,11 +583,13 @@ label battle(enemy):
         call dice_roll
 
         if d20 >= 19:
-            $ currentHP -= d10
-            "[enemy.name] makes a wild attack for [d10] damage!"
+            $ enemyCrit = d6 * enemy.attackModifier 
+            $ currentHP -= enemyCrit
+            "[enemy.name] makes a wild attack for [enemyCrit] damage!"
         else:
-            $ currentHP -= d6
-            "[enemy.name] attacks for [d6] damage."
+            $enemyAttack = d6 + enemy.attackModifier
+            $ currentHP -= enemyAttack
+            "[enemy.name] attacks for [enemyAttack] damage."
     ## while loop exit, game over
     "Your vision goes black, your body feels cold. This is where your journey ends."
     hide screen hp_bars_1v1
