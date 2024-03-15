@@ -3,32 +3,42 @@
 While running game code:
   File "game/script.rpy", line 238, in script call
     call battle(tonysoprano)
-  File "game/script.rpy", line 562, in script
-    $ enemy.hide_image()
-  File "game/script.rpy", line 562, in <module>
-    $ enemy.hide_image()
-  File "game/enemy.rpy", line 13, in hide_image
-    renpy.hide(self.image, at_list=[self.transform])
-TypeError: hide() got an unexpected keyword argument 'at_list'
+  File "game/script.rpy", line 537, in script
+    show screen hp_bars_1v1 with shake
+  File "renpy/common/000statements.rpy", line 649, in execute_show_screen
+    renpy.with_statement(eval(transition_expr))
+Exception: Parameter 'old_widget' is not known by ATL Transform.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 238, in script call
     call battle(tonysoprano)
-  File "game/script.rpy", line 562, in script
-    $ enemy.hide_image()
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 562, in <module>
-    $ enemy.hide_image()
-  File "game/enemy.rpy", line 13, in hide_image
-    renpy.hide(self.image, at_list=[self.transform])
-TypeError: hide() got an unexpected keyword argument 'at_list'
+  File "game/script.rpy", line 537, in script
+    show screen hp_bars_1v1 with shake
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 649, in execute_show_screen
+    renpy.with_statement(eval(transition_expr))
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 2978, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 3976, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 3922, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\atl.py", line 489, in __call__
+    raise Exception('Parameter %r is not known by ATL Transform.' % k)
+Exception: Parameter 'old_widget' is not known by ATL Transform.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 Derleth Manor 1.0
-Fri Mar  8 11:18:11 2024
+Fri Mar  8 16:19:57 2024

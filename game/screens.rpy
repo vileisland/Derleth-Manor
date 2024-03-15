@@ -1631,7 +1631,7 @@ style slider_slider:
     xsize 900
 
 
-## Custom transforms
+## Custom transforms and Screens - Marlene
 
 transform characterpos:
     xalign 0.5
@@ -1640,3 +1640,20 @@ transform characterpos:
 transform backgroundpos:
     xalign 0.5
     yalign 0.2
+
+screen hp_bars_1v1:
+
+    vbox:
+        spacing 20
+        xalign 0.15
+        yalign 0.2
+        xmaximum 300
+        text "Player"
+        bar value currentHP range baseHP
+    vbox:
+        spacing 20
+        xalign 0.15
+        yalign 0.4
+        xmaximum 300
+        text "Enemy"
+        bar value enemyHP range enemyMaxHP

@@ -532,7 +532,7 @@ label battle(enemy):
     $ enemyHP = enemy.HP
     $ enemyMaxHP = enemy.HP
     $ enemy.show_image()
-    "Suprise attack!"
+    "Sur prise attack!"
     "[enemy.name] lunges at you."
     show screen hp_bars_1v1
 
@@ -579,22 +579,7 @@ label battle(enemy):
     scene black with fade
     $ MainMenu(confirm=False)()
 
-screen hp_bars_1v1:
 
-    vbox:
-        spacing 20
-        xalign 0.15
-        yalign 0.2
-        xmaximum 300
-        text "Player"
-        bar value currentHP range baseHP
-    vbox:
-        spacing 20
-        xalign 0.15
-        yalign 0.4
-        xmaximum 300
-        text "Enemy"
-        bar value enemyHP range enemyMaxHP
 
 
 
