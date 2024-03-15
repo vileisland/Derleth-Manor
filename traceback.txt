@@ -3,17 +3,24 @@
 While running game code:
   File "game/script.rpy", line 238, in script call
     call battle(tonysoprano)
+<<<<<<< HEAD
   File "game/script.rpy", line 537, in script
     show screen hp_bars_1v1 with shake
   File "renpy/common/000statements.rpy", line 649, in execute_show_screen
     renpy.with_statement(eval(transition_expr))
 Exception: Parameter 'old_widget' is not known by ATL Transform.
+=======
+  File "game/script.rpy", line 571, in script
+    if enemyHasHealed = False:
+SyntaxError: invalid syntax (game/script.rpy, line 571)
+>>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 238, in script call
     call battle(tonysoprano)
+<<<<<<< HEAD
   File "game/script.rpy", line 537, in script
     show screen hp_bars_1v1 with shake
   File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
@@ -37,8 +44,27 @@ Full traceback:
   File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\atl.py", line 489, in __call__
     raise Exception('Parameter %r is not known by ATL Transform.' % k)
 Exception: Parameter 'old_widget' is not known by ATL Transform.
+=======
+  File "game/script.rpy", line 571, in script
+    if enemyHasHealed = False:
+  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 571)
+>>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b
 
 Windows-10-10.0.19045 AMD64
-Ren'Py 8.1.3.23091805
+Ren'Py 8.2.0.24012702
 Derleth Manor 1.0
+<<<<<<< HEAD
 Fri Mar  8 16:19:57 2024
+=======
+Wed Mar 13 15:23:12 2024
+>>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b

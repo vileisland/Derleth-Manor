@@ -2,9 +2,18 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/script.rpy", line 534: invalid syntax
     enemy.show_image() with shake
                         ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
 Fri Mar  8 16:18:10 2024
+=======
+File "game/script.rpy", line 570: expected statement.
+    enemy.healingCount -= 1
+                        ^
+
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Wed Mar 13 15:07:50 2024
+>>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b
