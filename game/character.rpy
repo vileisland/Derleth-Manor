@@ -85,3 +85,5 @@ init python:
     currentHP = 100
     basesanity = 100
     currentsanity = 100
+    weapon = "Unnarmed"
+    dmgmod = 0

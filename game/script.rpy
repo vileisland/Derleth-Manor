@@ -44,7 +44,7 @@ label start:
     "A week ago, a mysterious man who called himself Sinclair Lewis approached you with an urgent plea for your assistance regarding Derleth. Lewis claimed to have learned of your expertise in dealing with occult phenomena, thanks to your reputation as a..."
     menu:
         "...respected scholar of the occult":
-            $ charclass = "scholar"
+            $ charclass = "Scholar"
             $ strg = s_str
             $ dex = s_dex
             $ cha = s_cha
@@ -54,7 +54,7 @@ label start:
             $ currentHP = s_HP
             jump sinclair_conversation
         "...renowned clairvoyant with the gift of second sight":
-            $ charclass = "clairvoyant"
+            $ charclass = "Clairvoyant"
             $ strg = cl_str
             $ dex = cl_dex
             $ cha = cl_cha
@@ -64,7 +64,7 @@ label start:
             $ currentHP = cl_HP
             jump sinclair_conversation    
         "...famed exorcist of the Arkham diocese":
-            $ charclass = "priest"
+            $ charclass = "Priest"
             $ strg = p_str
             $ dex = p_dex
             $ cha = p_cha
@@ -74,7 +74,7 @@ label start:
             $ currentHP = p_HP
             jump sinclair_conversation                
         "...esteemed investigator of the paranormal":
-            $ charclass = "investigator"
+            $ charclass = "Investigator"
             $ strg = i_str
             $ dex = i_dex
             $ cha = i_cha
@@ -84,7 +84,7 @@ label start:
             $ currentHP = i_HP
             jump sinclair_conversation    
         "...fearless investigative journalist":
-            $ charclass = "journalist"
+            $ charclass = "Journalist"
             $ strg = j_str
             $ dex = j_dex
             $ cha = j_cha
@@ -259,6 +259,9 @@ label diningroom:
     $ minimap = True
 
     "You are in the dining room."
+    $ inv.add_item(bandage)
+    $ inv.add_item(bangersandmash)
+    $ inv.add_item(axe)
     jump westhall
 
 label servantsquarters:
@@ -529,7 +532,7 @@ label dice_roll:
     return
 
 init: 
-    $ combat_start = renpy.random.choice (["lunges at", "stomps over to", "crawls toward", "runs at", "stares menacingly at"])
+    $ combat_start = renpy.random.choice (["lunges at", "stomps over to", "crawls toward", "runs at", "stares menacingly at", "ambushes"])
 
 label battle(enemy):
     $ player_attack = 0
@@ -537,13 +540,8 @@ label battle(enemy):
     $ enemyMaxHP = enemy.HP
     $ enemyHasHealed = False
     $ enemy.show_image()
-<<<<<<< HEAD
-    "Sur prise attack!"
-    "[enemy.name] lunges at you."
-=======
-    "Suprise attack!"
+    "Surprise attack!"
     "[enemy.name] [combat_start] you."
->>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b
     show screen hp_bars_1v1
 
     while currentHP > 0 and enemyHP > 0:
@@ -551,19 +549,20 @@ label battle(enemy):
         menu:
             "Light Attack":
                 if d10 >= 7:
-                    $ player_attack = (d4 + d6) + dex
+                    $ player_attack = d4 + d6 + dex + dmgmod
                     $ enemyHP -= player_attack
                     "Critical Hit! [player_attack] damage to [enemy.name]!"
                 else:
-                    $ enemyHP -= d4 + dex
-                    "[d4] damage dealt."
+                    $ player_attack = d4 + dex + dmgmod
+                    $ enemyHP -= player_attack
+                    "[player_attack] damage dealt."
             "Heavy Attack":
                 if d10 >= 8:
-                    $ player_attack = (d6 + d4) + strg
+                    $ player_attack = d6 + d4 + strg + dmgmod
                     $ enemyHP -= player_attack
                     "Massive Damage! [player_attack] damage. [enemy.name] looks dazed."
                 elif d10 >= 5:
-                    $ player_attack = (d6 + 2) + strg
+                    $ player_attack = d6 + 2 + strg + dmgmod
                     $ enemyHP -= player_attack
                     "Critical Hit! [player_attack] damage to [enemy.name]!"
                 else:
@@ -573,12 +572,6 @@ label battle(enemy):
             "Pass":
                 "You do nothing."
 
-        if enemyHP > 0 and enemyHP < 20:
-            if enemyHasHealed is False:
-                "[enemy.name] healed themselves using [enemy.healingMove]!"
-                $ enemyHP += 10
-                $ enemyHasHealed = True
-
         if enemyHP <= 0:
             "[enemy.name] defeated!"
             $ enemy.hide_image() 
@@ -586,15 +579,36 @@ label battle(enemy):
             return
 
         call dice_roll
-
-        if d20 >= 19:
-            $ enemyCrit = d6 * enemy.attackModifier 
-            $ currentHP -= enemyCrit
-            "[enemy.name] makes a wild attack for [enemyCrit] damage!"
+               
+        if not (enemyHP > 0 and enemyHP < 20) or enemyHasHealed is True:
+            if d20 >= 19:
+                $ enemyCrit = d6 * enemy.attackModifier 
+                $ currentHP -= enemyCrit
+                "[enemy.name] makes a wild attack for [enemyCrit] damage!"
+            elif d20 >=16:
+                $ add_or_sub = renpy.random.randint(0,1)
+                if add_or_sub == 0:
+                    $ sp1dmg = enemy.sp1dmg + d4
+                else: 
+                    $ sp1dmg = enemy.sp1dmg - d6
+                $ currentHP -= sp1dmg
+                "[enemy.sp1text]. It hits for [sp1dmg]." 
+            elif d20 >=12:
+                $ add_or_sub = renpy.random.randint(0,1)
+                if add_or_sub == 0:
+                    $ sp2dmg = enemy.sp2dmg + d4
+                else: 
+                    $ sp2dmg = enemy.sp2dmg - d6
+                $ currentHP -= sp2dmg
+                "[enemy.sp2text]. It hits for [sp2dmg]." 
+            else:
+                $ enemyAttack = d6 + enemy.attackModifier
+                $ currentHP -= enemyAttack
+                "[enemy.name] attacks for [enemyAttack] damage."
         else:
-            $enemyAttack = d6 + enemy.attackModifier
-            $ currentHP -= enemyAttack
-            "[enemy.name] attacks for [enemyAttack] damage."
+                "[enemy.name] healed themselves using [enemy.healingMove]!"
+                $ enemyHP += 10
+                $ enemyHasHealed = True
     ## while loop exit, game over
     "Your vision goes black, your body feels cold. This is where your journey ends."
     hide screen hp_bars_1v1

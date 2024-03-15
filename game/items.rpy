@@ -67,6 +67,8 @@ init python:
 
         ##Use sanity healing item
         def use(self):
+            global currentsanity
+            global basesanity
             renpy.show(self.image, at_list=[self.transform])
             renpy.say("", what=f"Used {self.name}, it restored your sanity by {self.sanitypts}. Your sanity is now {currentsanity}.")
             currentsanity += self.sanitypts
@@ -81,6 +83,14 @@ init python:
             self.attackpts = attackpts
         def d_attack(self):
             narrator(f"Attack strength: {self.attackpts}.")
+        def use(self):
+            global weapon
+            global dmgmod
+            renpy.show(self.image, at_list=[self.transform])
+            renpy.say("", what=f"Equipped {self.name}.")
+            weapon = self.name
+            dmgmod = self.attackpts
+            renpy.hide(self.image)
 
     class Tool(Item):
         def __init__(self, name, description, image, combine):
