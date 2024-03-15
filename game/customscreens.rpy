@@ -9,12 +9,13 @@ screen hud():
     imagebutton idle "map.png":
         focus_mask None
         pos(10, 261)
-        action Show("map")
+        action Show("status"), Hide("hud")
 
     imagebutton idle "inventory.png":
         focus_mask None
         pos (10, 422)
         action Show("inventory")
+
 
 screen inventory():
     modal True

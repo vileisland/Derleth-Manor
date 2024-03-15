@@ -163,11 +163,6 @@ screen crtoverlay:
     zorder 100
     modal False
 
-#Location Display - Ryan
-screen locationDisplay():
-    text locations[current_location]["name"]:
-        pos(1500, 35)
-
 
 ## Input screen ################################################################
 ##

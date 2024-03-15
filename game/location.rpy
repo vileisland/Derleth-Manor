@@ -136,8 +136,16 @@ screen status():
     on "show" action SetVariable("current_area", locations[current_location]["area"])
     
     #use game_menu(_("Status")):
-    text locations[current_location]["name"]
-    use map
+    frame:
+        text locations[current_location]["name"]:
+            ypos -70
+            xpos 750
+        imagebutton idle "closebutton.png":
+            ypos -89
+            xpos 284
+            focus_mask None
+            action Hide("showMap"), Hide("status"), Show("hud")
+        use map
 
 ## Minimap
 
@@ -159,12 +167,9 @@ screen minimap():
         fixed pos minimap_offset,minimap_offset xysize config.screen_width-2*minimap_offset, config.screen_height-2*minimap_offset-gui.textbox_height:
 
             fixed fit_first True xalign minimap_position[0] yalign minimap_position[1]:
-                button:
-                    frame:
-                        use map(scale=preferences.minimap_size, minimap=True)
-                        at minimap_opacity(preferences.minimap_opacity)
-                    action ShowMenu('status')
-                    keyboard_focus False
+                frame:
+                    use map(scale=preferences.minimap_size, minimap=True)
+                    at minimap_opacity(preferences.minimap_opacity)
 
 ## Map Screen
 
@@ -184,7 +189,7 @@ screen map(scale=1.0, minimap=False):
                 yalign 0.5
                 xalign 0.5
 
-            # The map background image
+                # The map background image
             add map_image_path + str(area) + map_image_type zoom scale:
                 if minimap and preferences.minimap_zoom:
                     crop (int(locations[current_location]["pos"][0]-renpy.image_size(map_image_path + str(area) + map_image_type)[0]/(preferences.minimap_zoom*2)), int(locations[current_location]["pos"][1]-renpy.image_size(map_image_path + str(area) + map_image_type)[1]/(preferences.minimap_zoom*2)), int(renpy.image_size(map_image_path + str(area) + map_image_type)[0]/preferences.minimap_zoom), int(renpy.image_size(map_image_path + str(area) + map_image_type)[1]/preferences.minimap_zoom))

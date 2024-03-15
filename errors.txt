@@ -3,6 +3,7 @@ errors listed below, and try again.
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 File "game/script.rpy", line 534: invalid syntax
     enemy.show_image() with shake
                         ^
@@ -17,3 +18,11 @@ File "game/script.rpy", line 570: expected statement.
 Ren'Py Version: Ren'Py 8.2.0.24012702
 Wed Mar 13 15:07:50 2024
 >>>>>>> 65334762eb211c3e98a8bae29ec7d9bd8115ea2b
+=======
+File "game/location.rpy", line 142: 'zorder' is not a keyword argument or valid child of the imagebutton statement.
+    zorder 100
+          ^
+
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Mon Mar 11 00:35:54 2024
+>>>>>>> 7bd99d1a3721a95dc1c90d6b2f4c19597d19fff3
