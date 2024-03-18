@@ -1,13 +1,13 @@
 
 #Location images
-#image bg attic = "/images/locations/attic.png"
-#image bg ballroom = "/images/locations/ballroom.png"
+image bg attic = "/images/locations/attic.png"
+image bg ballroom = "/images/locations/ballroom.png"
 image bg barroom = "/images/locations/barroom.png"
 image bg bathroom = "/images/locations/bathroom.png"
-#image bg bedroom = "/images/locations/bedroom.png"
+image bg bedroom = "/images/locations/bedroom.png"
 image bg diningroom = "/images/locations/diningroom.png"
 image bg easthall = "/images/locations/easthall.png"
-#image bg eastupstairs = "/images/locations/eastupstairs.png"
+image bg eastupstairs = "/images/locations/eastupstairs.png"
 #image bg front = "/images/locations/front.png"
 image bg garden = "/images/locations/garden.png"
 image bg graveyard = "/images/locations/graveyard.png"
@@ -15,36 +15,38 @@ image bg greenhouse = "/images/locations/greenhouse.png"
 image bg kitchen = "/images/locations/kitchen.png"
 image maingate = "/images/locations/maingate.png"
 image bg mainhall = "/images/locations/mainhall.png"
-#image bg musicroom = "/images/locations/musicroom.png"
-#image bg nursery = "/images/locations/nursery.png"
+image bg musicroom = "/images/locations/musicroom.png"
+image bg nursery = "/images/locations/nursery.png"
 image bg parlor = "/images/locations/parlor.png"
-#image bg sceanceroom = "/images/locations/sceanceroom.png"
-#image bg secondbedroom = "/images/locations/secondbedroom.png"
+image bg sceanceroom = "/images/locations/sceanceroom.png"
+image bg secondbedroom = "/images/locations/secondbedroom.png"
 image bg servantsbedroom = "/images/locations/servantsbedroom.png"
 image bg servantsquarters = "/images/locations/servantsquarters.png"
 image bg shed = "/images/locations/shed.png"
 image bg storageroom = "/images/locations/storageroom.png"
 image bg study = "/images/locations/study.png"
 image bg westhall = "/images/locations/westhall.png"
-#image bg westupstairs = "/images/locations/westupstairs.png"
+image bg westupstairs = "/images/locations/westupstairs.png"
 
 
 define locations = {
-    "attic" : {"name":_("The Attic"), "area":1, "pos":( 0, 0)},
+    "astronomytower" : {"name":_("Astronomy Tower"), "area":2, "pos":( 0, 0)},
 
-    "ballroom" : {"name":_("The Ballroom"), "area":1, "pos":(0, 0)},
+    "attic" : {"name":_("The Attic"), "area":2, "pos":( 0, 0)},
+
+    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(0, 0)},
 
     "barroom" : {"name":_("The Barroom"), "area":1, "pos":(1374, 502)},
 
     "bathroom" : {"name":_("Bathroom"), "area":1, "pos":(1435, 346)},
 
-    "bedroom" : {"name":_("Bedroom"), "area":1, "pos":(0, 0)},
+    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(0, 0)},
 
     "diningroom" : {"name":_("Dining Room"), "area":1, "pos":(918,352)},
 
     "easthall" : {"name":_("The Eastern Hall"), "area":1, "pos":(1392, 423)},
 
-    #"eastupstairs" : {"name":_("Eastern Upstairs"), "area:"1, "pos":(0, 0)},
+    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(0, 0)},
 
     "garden" : {"name":_("Garden"), "area":1, "pos":(331, 438)},
 
@@ -58,13 +60,15 @@ define locations = {
 
     "mainhall" : {"name":_("The Main Hall"), "area":1, "pos":(1116, 550)},
 
-    "musicroom" : {"name":_("Music Room"), "area":1, "pos":(0, 0)},
+    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(0, 0)},
+
+    "nursery" : {"name":_("Nursery"), "area":2, "pos":(0, 0)},
 
     "parlor" : {"name":_("The Parlor"), "area":1, "pos":(860, 480)},
 
-    "sceanceroom" : {"name":_("Sceance Room"), "area":1, "pos":(0, 0)},
+    "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(0, 0)},
 
-    "secondbedroom" : {"name":_("Second Bedroom"), "area":1, "pos":(0, 0)},
+    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(0, 0)},
 
     "servantsbedroom" : {"name":_("Servant's Bedroom"), "area":1, "pos":(657, 370)},
 
@@ -76,7 +80,7 @@ define locations = {
 
     "westhall" : {"name":_("The West Hall"), "area":1, "pos":(886, 415)},
 
-    "westupstairs" : {"name":_("Western Upstairs"), "area":1, "pos":(0, 0)},
+    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(0, 0)},
     }
 
 
@@ -90,7 +94,7 @@ define map_image_type = ".png"
 default current_area = 1
 default current_location = "maingate"
 
-default area_limit = 1
+default area_limit = 2
 
 define minimap_position = (1.0, 0.0)
 define minimap_offset = 10
@@ -211,5 +215,5 @@ screen map(scale=1.0, minimap=False):
             if not minimap and area_limit > 1:
                 hbox xalign 0.5:
                     textbutton "<" action SetVariable("current_area", If(current_area > 1, current_area-1, 1))
-                    text _("AREA")
+                    text _("Floor")
                     textbutton ">" action SetVariable("current_area", If(current_area < area_limit, current_area+1, area_limit))
