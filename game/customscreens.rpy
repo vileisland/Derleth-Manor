@@ -40,7 +40,9 @@ screen stats():
     vbox:
         pos 0.2, 0.10
         text "[charclass]"
+        text " "
         image "images/cportraits/[charclass]por.png"
+        text " "
         text "Health: [currentHP]/[baseHP]"
         text "Sanity: [currentsanity]/[basesanity]"
         text "Strength: [strg]"

@@ -87,3 +87,4 @@ init python:
     currentsanity = 100
     weapon = "Unnarmed"
     dmgmod = 0
+    

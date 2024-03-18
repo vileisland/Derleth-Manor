@@ -1,831 +1,643 @@
-2024-03-17 19:01:36 UTC
+Mon Mar 18 15:18:54 2024
 Windows-10-10.0.19045
-Ren'Py 8.2.0.24012702
+Ren'Py 8.1.3.23091805
+ 
 
-Early init took 0.08s
-Loading error handling took 0.08s
-Loading script took 1.71s
-Loading save slot metadata took 0.10s
-Loading persistent took 0.00s
-
-File "game/location.rpy", line 47: invalid syntax
-        "eastupstairs" : {"name":_("Eastern Upstairs"), "area:"2, "pos":(0, 0)},\
-                                                                ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 1.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 23.10s
-Loading error handling took 0.04s
-Loading script took 0.85s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/location.rpy", line 47: invalid syntax
-        "eastupstairs" : {"name":_("Eastern Upstairs"), "area:"2, "pos":(0, 0)},\
-                                                                ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.26s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 25.31s
-Loading error handling took 0.04s
-Loading script took 0.82s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/location.rpy", line 47: invalid syntax
-        "eastupstairs" : {"name":_("Eastern Upstairs"), "area:"2, "pos":(0, 0)},\
-                                                                ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.26s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 82.62s
-Loading error handling took 0.04s
-Loading script took 0.84s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.20s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
+Bootstrap to the start of init.init. took 0.02s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.250000
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.01s
+DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
+Creating interface object. took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 223, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 226, in <module>
+    "Enter the parlor." if (ornatekeyparlor in inv):
+TypeError: argument of type 'Inventory' is not iterable
+
+While running game code:
+  File "game/script.rpy", line 223, in script
+    menu:
+  File "game/script.rpy", line 226, in <module>
+    "Enter the parlor." if (ornatekeyparlor in inv):
+TypeError: argument of type 'Inventory' is not iterable
+Resetting cache.
+Bootstrap to the start of init.init. took 135.04s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.09s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.01s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 223, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 226, in <module>
+    "Enter the parlor." if (ornatekeyparlor in inv()):
+TypeError: 'Inventory' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 223, in script
+    menu:
+  File "game/script.rpy", line 226, in <module>
+    "Enter the parlor." if (ornatekeyparlor in inv()):
+TypeError: 'Inventory' object is not callable
+Resetting cache.
+Bootstrap to the start of init.init. took 157.29s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.01s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+While running game code:
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+Resetting cache.
+Bootstrap to the start of init.init. took 194.60s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.01s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.15s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.02s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.06s
+Performance test:
+Interface start. took 0.02s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Windowed mode.
+Fullscreen mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/script.rpy", line 195, in script
-    "As you step through the threshold, the door slams shut behind you."
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\exports.py", line 1493, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 1391, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 1042, in do_display
-    display_say(who,
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 738, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2814, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 1352, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 754, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 1361, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\transform.py", line 957, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\im.py", line 626, in render
-    return cache.get(self, render=True)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\im.py", line 309, in get
-    surf = image.load()
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\im.py", line 761, in load
-    raise e
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\im.py", line 711, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'map/2.png'.
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 
-While loading <renpy.display.im.Image object ('map/2.png') at 0x0000000003a9b190>:
-  File "game/script.rpy", line 195, in script
-    "As you step through the threshold, the door slams shut behind you."
-OSError: Couldn't find file 'map/2.png'.
+While running game code:
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 254, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 254, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
+
+While running game code:
+  File "game/script.rpy", line 254, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "game/script.rpy", line 254, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+While running game code:
+  File "game/script.rpy", line 264, in script
+    menu:
+  File "game/script.rpy", line 284, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Early init took 176.59s
-Loading error handling took 0.01s
-Loading script took 0.10s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Bootstrap to the start of init.init. took 296.00s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
+Creating interface object. took 0.17s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+While running game code:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 255, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 255, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
+
+While running game code:
+  File "game/script.rpy", line 255, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "game/script.rpy", line 255, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+While running game code:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+Resetting cache.
+Bootstrap to the start of init.init. took 322.97s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.01s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+
+While running game code:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
+Resetting cache.
+Bootstrap to the start of init.init. took 325.00s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.05s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.02s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.06s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.06s
+Performance test:
+Interface start. took 0.02s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Windowed mode.
+Fullscreen mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 273.91s
-Loading error handling took 0.01s
-Loading script took 0.14s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 298.46s
-Loading error handling took 0.01s
-Loading script took 0.14s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 312.97s
-Loading error handling took 0.01s
-Loading script took 0.10s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 639.71s
-Loading error handling took 0.01s
-Loading script took 0.13s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 685.28s
-Loading error handling took 0.01s
-Loading script took 0.14s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2683, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2683, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 141, in execute
-    frame:
-  File "game/location.rpy", line 150, in execute
-    use map
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 188, in execute
-    if area != None:
-  File "game/location.rpy", line 189, in execute
-    fixed fit_first True:
-  File "game/location.rpy", line 213, in execute
-    if not minimap and area_limit > 1:
-  File "game/location.rpy", line 214, in execute
-    hbox xalign 0.5:
-  File "game/location.rpy", line 216, in execute
-    text _("Floor" + area)
-  File "game/location.rpy", line 216, in <module>
-    text _("Floor" + area)
-TypeError: can only concatenate str (not "int") to str
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 141, in execute
-    frame:
-  File "game/location.rpy", line 150, in execute
-    use map
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 188, in execute
-    if area != None:
-  File "game/location.rpy", line 189, in execute
-    fixed fit_first True:
-  File "game/location.rpy", line 213, in execute
-    if not minimap and area_limit > 1:
-  File "game/location.rpy", line 214, in execute
-    hbox xalign 0.5:
-  File "game/location.rpy", line 216, in execute
-    text _("Floor" + area)
-  File "game/location.rpy", line 216, in <module>
-    text _("Floor" + area)
-TypeError: can only concatenate str (not "int") to str
-Resetting cache.
-Early init took 705.11s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 
 Full traceback:
-  File "game/script.rpy", line 217, in script
-    "You are in the west hallway. There are two doors to your left, two to your right, and on down the hall."
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\exports.py", line 1493, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 1391, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 1042, in do_display
-    display_say(who,
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\character.py", line 738, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2683, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\core.py", line 2683, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\rwdel\Documents\Renpy\renpy-8.2.0-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 141, in execute
-    frame:
-  File "game/location.rpy", line 150, in execute
-    use map
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 188, in execute
-    if area != None:
-  File "game/location.rpy", line 189, in execute
-    fixed fit_first True:
-  File "game/location.rpy", line 213, in execute
-    if not minimap and area_limit > 1:
-  File "game/location.rpy", line 214, in execute
-    hbox xalign 0.5:
-  File "game/location.rpy", line 216, in execute
-    text _("Floor")("area")
-  File "game/location.rpy", line 216, in <module>
-    text _("Floor")("area")
-TypeError: 'str' object is not callable
+  File "game/script.rpy", line 255, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 255, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
 
 While running game code:
-  File "game/script.rpy", line 217, in script
-    "You are in the west hallway. There are two doors to your left, two to your right, and on down the hall."
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 136, in execute
-    screen status():
-  File "game/location.rpy", line 141, in execute
-    frame:
-  File "game/location.rpy", line 150, in execute
-    use map
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 178, in execute
-    screen map(scale=1.0, minimap=False):
-  File "game/location.rpy", line 188, in execute
-    if area != None:
-  File "game/location.rpy", line 189, in execute
-    fixed fit_first True:
-  File "game/location.rpy", line 213, in execute
-    if not minimap and area_limit > 1:
-  File "game/location.rpy", line 214, in execute
-    hbox xalign 0.5:
-  File "game/location.rpy", line 216, in execute
-    text _("Floor")("area")
-  File "game/location.rpy", line 216, in <module>
-    text _("Floor")("area")
-TypeError: 'str' object is not callable
-Resetting cache.
-Early init took 715.91s
-Loading error handling took 0.01s
-Loading script took 0.13s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.06s
+  File "game/script.rpy", line 255, in script
+    if (d20 > 15 and tony_defeated == False):
+  File "game/script.rpy", line 255, in <module>
+    if (d20 > 15 and tony_defeated == False):
+NameError: name 'tony_defeated' is not defined
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1708.44s
-Loading error handling took 0.01s
-Loading script took 0.14s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.06s
+Full traceback:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
+While running game code:
+  File "game/script.rpy", line 265, in script
+    menu:
+  File "game/script.rpy", line 285, in <module>
+    "Inspect sink." if (inspect_sink == False):
+NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Early init took 1713.21s
-Loading error handling took 0.01s
-Loading script took 0.13s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Bootstrap to the start of init.init. took 382.08s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.01s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
+Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
+Dump and make backups. took 0.03s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
+Creating interface object. took 0.15s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.06s
+Performance test:
+Interface start. took 0.02s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Windowed mode.
+Fullscreen mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
+Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 551.61'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1722.60s
-Loading error handling took 0.01s
-Loading script took 0.14s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\rwdel\\AppData\\Roaming/RenPy/backups\\Text-Adventure':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.23'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096

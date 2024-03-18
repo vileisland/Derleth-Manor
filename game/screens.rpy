@@ -160,7 +160,13 @@ style say_dialogue:
 # Custom CRT Overlay - Marlene
 screen crtoverlay:
     image "gui/crtoverlay.png"
-    zorder 100
+    zorder 1000
+    modal False
+
+# Custom Health Overlay - Marlene
+screen healthoverlay:
+    image "gui/healthoverlay.png"
+    zorder 1001
     modal False
 
 

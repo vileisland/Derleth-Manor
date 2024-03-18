@@ -147,6 +147,8 @@ init python:
     saw = Tool("Saw", "For sawin' stuff.", "saw", "")
     shovel = Tool("Shovel", "Strike the earth!", "shovel", "")
     wrench = Tool("Wrench", "Hey, who needs a plumber?", "wrench", "")
+    ##Specific Keys
+    ornatekeyparlor = Tool("Ornate key", "This must open something specific.", "ornatekey", "")
 
     ##Weapons
     axe = Weapon("Axe", "Looks sturdy", "axe", 5)
@@ -167,3 +169,5 @@ init python:
     low_tier_weapon = [axe, huntingknife, mace, scythe]
     mid_tier_weapon = [crossbow, pistol, rifle]
     high_tier_weapon = [sword]
+
+    

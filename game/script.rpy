@@ -202,6 +202,8 @@ label mainhall:
             jump easthall
         "Flee in terror" if (flee_attempt == False):
             "You try with all your strength, but the door is locked tight. You're trapped in here."
+            $ currentsanity - 10
+            $ renpy.notify("Lost 10 Sanity.")
             $ flee_attempt = True
             jump mainhall
 
@@ -213,13 +215,19 @@ label westhall:
     show bg westhall at backgroundpos
     with dissolve
     $ minimap = True
+    call dice_roll
+    if (d20 > 14):
+        call battle(renpy.random.choice(easyenemies))
 
     "You are in the west hallway. There are two doors to your left, two to your right, and on down the hall."
     menu:
         "Go to the kitchen":
             jump kitchen
-        "Enter the parlor.":
+        "Enter the parlor." if (ornatekeyparlor in inv.items):
             jump parlor
+        "Enter the parlor." if (ornatekeyparlor not in inv.items):
+            "The parlor is locked tight."
+            jump westhall
         "Search the dining room.":
             jump diningroom
         "Visit the servants quarters.":
@@ -229,16 +237,68 @@ label westhall:
         "Return to the main hall.":
             jump mainhall
 
+## Kitchen Variables
+default tony_defeated = False
+default fridge_empty = False
+default inspect_sink = False
+default sink_success = False
+default sink_searched = False
+
 label kitchen:
     show screen crtoverlay
     scene desktopbg
     show bg kitchen at backgroundpos
     with dissolve
     $ minimap = True
-    call battle(tonysoprano)
 
-    "This is the kitchen. The fridge is wide open."
-    jump westhall
+    call dice_roll
+    if (d20 > 15 and tony_defeated == False):
+        "You see a dark figure rustling through the fridge!"
+        show tonysoprano at characterpos
+        "Tony" "So you've come to take my gabagool, huh? You think you can just walk in here and help yourself? I don't think so, pal. That's mine, capisce? You want a taste, you gotta go through me. This ain't no free buffet!"
+        call battle(tonysoprano)
+        "With Tony disposed of, you gleefully pick up your hard earned coldcuts."
+        $ inv.add_item(coldcuts)
+        $ tony_defeated = True
+        
+    "This is the kitchen. The fridge is wide open. The sink is full of dirty water."
+    menu:
+        "Search the fridge.":
+            if fridge_empty == False:
+                "Mysteriously the fridge is packed with fresh food."
+                $ inv.add_item(renpy.random.choice(food_list))
+                $ inv.add_item(renpy.random.choice(food_list))
+                $ inv.add_item(renpy.random.choice(alc_list))
+                $ fridge_empty = True
+                jump kitchen
+            else:
+                "You've already plundered the fridge."
+                jump kitchen
+        "Search the cupboards.":
+            if per > 6:
+                "You find a roll of bandages behind an empty box of cornflakes."
+                $ inv.add_item(bandages)
+                jump kitchen
+            else:
+                "You find nothing useful."
+                jump kitchen
+        "Inspect sink." if (inspect_sink == False):
+            if per > 6:
+                "You look into the dirty water and notice something glistening at the bottom of the sink."
+                $ sink_success = True
+                jump kitchen
+            else:
+                "It's full of dirty sink water. Big whoop!"
+                jump kitchen
+        "Search the sink." if (sink_success == True and sink_searched == False):
+            "You plunge your hand into the disgusting water. Yuck, something slimey touched your hand. You resist the urge to scream and suddenly you feel something metal. You grasp your prize and pull out an old key."
+            $ sink_searched = True
+            $ inv.add_item(ornatekeyparlor)
+            jump kitchen
+        "Return to the West Hall.":
+            jump westhall
+
+
 
 label parlor:
     show screen crtoverlay
@@ -487,12 +547,24 @@ label westupstairs:
     with dissolve
     $ minimap = True
 
-    "There are two doors here. I haven't thought of any locations for them. Ignore them. There is a ladder to the attic ahead of you."
+    "There is one doors here. I haven't thought of any locations for it. Ignore it. There is a ladder to the attic ahead of you and a door to your right."
     menu:
+        "Enter the Astronomy Tower.":
+            jump astronomy
         "Go to the attic.":
             jump attic
         "Return to the ballroom.":
             jump ballroom
+
+label astronomy:
+    show screen crtoverlay
+    scene desktopbg
+    show astronomytower at backgroundpos
+    with dissolve
+    $ minimap = True
+
+    "This is the astronomy tower. There is a large telescope in the center of the room."
+    jump westupstairs
 
 label attic:
     show screen crtoverlay
@@ -520,6 +592,8 @@ label sceanceroom:
 
 label use_item(item):
     $ item.use()
+    if currentHP > 24:
+        hide screen healthoverlay
     return
 
 ##Battle labels - Marlene
@@ -532,7 +606,7 @@ label dice_roll:
     return
 
 init: 
-    $ combat_start = renpy.random.choice (["lunges at", "stomps over to", "crawls toward", "runs at", "stares menacingly at", "ambushes"])
+    $ combat_start = renpy.random.choice (["lunges at", "stomps over to", "crawls toward", "runs at", "stares menacingly at", "ambushes", "corners", "attacks", "preys on", "strikes", "schemes against"])
 
 label battle(enemy):
     $ player_attack = 0
@@ -592,7 +666,7 @@ label battle(enemy):
                 else: 
                     $ sp1dmg = enemy.sp1dmg - d6
                 $ currentHP -= sp1dmg
-                "[enemy.sp1text]. It hits for [sp1dmg]." 
+                "[enemy.sp1text] It hits for [sp1dmg]." 
             elif d20 >=12:
                 $ add_or_sub = renpy.random.randint(0,1)
                 if add_or_sub == 0:
@@ -600,7 +674,7 @@ label battle(enemy):
                 else: 
                     $ sp2dmg = enemy.sp2dmg - d6
                 $ currentHP -= sp2dmg
-                "[enemy.sp2text]. It hits for [sp2dmg]." 
+                "[enemy.sp2text] It hits for [sp2dmg]." 
             else:
                 $ enemyAttack = d6 + enemy.attackModifier
                 $ currentHP -= enemyAttack
@@ -609,6 +683,8 @@ label battle(enemy):
                 "[enemy.name] healed themselves using [enemy.healingMove]!"
                 $ enemyHP += 10
                 $ enemyHasHealed = True
+        if currentHP < 25:
+            show screen healthoverlay
     ## while loop exit, game over
     "Your vision goes black, your body feels cold. This is where your journey ends."
     hide screen hp_bars_1v1
