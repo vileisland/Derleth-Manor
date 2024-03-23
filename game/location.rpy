@@ -34,19 +34,19 @@ define locations = {
 
     "attic" : {"name":_("The Attic"), "area":2, "pos":( 0, 0)},
 
-    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(0, 0)},
+    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(412, 225)},
 
     "barroom" : {"name":_("The Barroom"), "area":1, "pos":(1374, 502)},
 
     "bathroom" : {"name":_("Bathroom"), "area":1, "pos":(1435, 346)},
 
-    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(0, 0)},
+    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(733, 136)},
 
     "diningroom" : {"name":_("Dining Room"), "area":1, "pos":(918,352)},
 
     "easthall" : {"name":_("The Eastern Hall"), "area":1, "pos":(1392, 423)},
 
-    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(0, 0)},
+    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(707, 226)},
 
     "garden" : {"name":_("Garden"), "area":1, "pos":(331, 438)},
 
@@ -60,15 +60,15 @@ define locations = {
 
     "mainhall" : {"name":_("The Main Hall"), "area":1, "pos":(1116, 550)},
 
-    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(0, 0)},
+    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(603, 126)},
 
-    "nursery" : {"name":_("Nursery"), "area":2, "pos":(0, 0)},
+    "nursery" : {"name":_("Nursery"), "area":2, "pos":(735, 335)},
 
     "parlor" : {"name":_("The Parlor"), "area":1, "pos":(860, 480)},
 
     "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(0, 0)},
 
-    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(0, 0)},
+    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(603, 337)},
 
     "servantsbedroom" : {"name":_("Servant's Bedroom"), "area":1, "pos":(657, 370)},
 
@@ -80,7 +80,7 @@ define locations = {
 
     "westhall" : {"name":_("The West Hall"), "area":1, "pos":(886, 415)},
 
-    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(0, 0)},
+    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(189, 222)},
     }
 
 
@@ -169,7 +169,6 @@ screen minimap():
     if minimap and preferences.show_minimap and area != None:
 
         fixed pos minimap_offset,minimap_offset xysize config.screen_width-2*minimap_offset, config.screen_height-2*minimap_offset-gui.textbox_height:
-
             fixed fit_first True xalign minimap_position[0] yalign minimap_position[1]:
                 frame:
                     use map(scale=preferences.minimap_size, minimap=True)

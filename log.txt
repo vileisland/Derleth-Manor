@@ -1,643 +1,673 @@
-Mon Mar 18 15:18:54 2024
+2024-03-23 15:51:46 UTC
 Windows-10-10.0.19045
-Ren'Py 8.1.3.23091805
- 
+Ren'Py 8.2.0.24012702
 
-Bootstrap to the start of init.init. took 0.02s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.17s
-Loading save slot metadata. took 0.02s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 0.15s
+Loading error handling took 0.05s
+Loading script took 0.49s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.13s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.01s
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.16s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.01s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 313.83s
+Loading error handling took 0.04s
+Loading script took 0.37s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 337.23s
+Loading error handling took 0.11s
+Loading script took 1.65s
+Loading save slot metadata took 0.24s
+Loading persistent took 0.00s
+Running init code took 0.16s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.17s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 589.30s
+Loading error handling took 0.03s
+Loading script took 0.34s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 626.79s
+Loading error handling took 0.04s
+Loading script took 0.35s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.19s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2474.37s
+Loading error handling took 0.04s
+Loading script took 0.47s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2480.97s
+Loading error handling took 0.02s
+Loading script took 0.37s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
+Interface start took 0.21s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 223, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 226, in <module>
-    "Enter the parlor." if (ornatekeyparlor in inv):
-TypeError: argument of type 'Inventory' is not iterable
-
-While running game code:
-  File "game/script.rpy", line 223, in script
-    menu:
-  File "game/script.rpy", line 226, in <module>
-    "Enter the parlor." if (ornatekeyparlor in inv):
-TypeError: argument of type 'Inventory' is not iterable
 Resetting cache.
-Bootstrap to the start of init.init. took 135.04s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.09s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.01s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 2576.86s
+Loading error handling took 0.02s
+Loading script took 0.44s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.07s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.27s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 223, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 226, in <module>
-    "Enter the parlor." if (ornatekeyparlor in inv()):
-TypeError: 'Inventory' object is not callable
-
-While running game code:
-  File "game/script.rpy", line 223, in script
-    menu:
-  File "game/script.rpy", line 226, in <module>
-    "Enter the parlor." if (ornatekeyparlor in inv()):
-TypeError: 'Inventory' object is not callable
 Resetting cache.
-Bootstrap to the start of init.init. took 157.29s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.01s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 2832.00s
+Loading error handling took 0.03s
+Loading script took 0.37s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3559.63s
+Loading error handling took 0.03s
+Loading script took 0.33s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3580.10s
+Loading error handling took 0.02s
+Loading script took 0.28s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.27s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Bootstrap to the start of init.init. took 194.60s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.01s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 3591.21s
+Loading error handling took 0.03s
+Loading script took 0.34s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.22s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 254, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 254, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-While running game code:
-  File "game/script.rpy", line 254, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "game/script.rpy", line 254, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 264, in script
-    menu:
-  File "game/script.rpy", line 284, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Bootstrap to the start of init.init. took 296.00s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 3617.78s
+Loading error handling took 0.03s
+Loading script took 0.34s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.17s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.13s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.27s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 255, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 255, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-While running game code:
-  File "game/script.rpy", line 255, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "game/script.rpy", line 255, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Bootstrap to the start of init.init. took 322.97s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.01s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 5095.07s
+Loading error handling took 0.03s
+Loading script took 0.40s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.26s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
 Resetting cache.
-Bootstrap to the start of init.init. took 325.00s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.05s
-Loading save slot metadata. took 0.02s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Early init took 5110.87s
+Loading error handling took 0.03s
+Loading script took 0.39s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Dump and make backups. took 0.02s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Backing up script files to 'C:\\Users\\Ryan\\AppData\\Roaming/RenPy/backups\\Text-Adventure-main':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.16s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5302.96s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.05s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.03s
+Prepare screens took 0.14s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
+Interface start took 0.28s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Mobile Graphics'
+Version: b'4.6.14739 Compatibility Profile Context 21.20.02 27.20.22002.57'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 255, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 255, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-While running game code:
-  File "game/script.rpy", line 255, in script
-    if (d20 > 15 and tony_defeated == False):
-  File "game/script.rpy", line 255, in <module>
-    if (d20 > 15 and tony_defeated == False):
-NameError: name 'tony_defeated' is not defined
-
-Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-
-While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
-Resetting cache.
-Bootstrap to the start of init.init. took 382.08s
-Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.01s
-Loading persistent. took 0.00s
-Running init code. took 0.01s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Vile\\AppData\\Roaming/RenPy/backups\\Text Adventure':
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.02s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 551.61'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1390, 782) drawable=(1390, 782)
 Maximum texture size: 4096x4096

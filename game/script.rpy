@@ -466,7 +466,7 @@ label barroom:
 label eastupstairs:
     show screen crtoverlay
     scene desktopbg
-    show eastupstairs at backgroundpos
+    show bg eastupstairs at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -488,7 +488,7 @@ label eastupstairs:
 label bedroom:
     show screen crtoverlay
     scene desktopbg
-    show bedroom at backgroundpos
+    show bg bedroom at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -498,7 +498,7 @@ label bedroom:
 label nursery:
     show screen crtoverlay
     scene desktopbg
-    show nursery at backgroundpos
+    show bg nursery at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -508,7 +508,7 @@ label nursery:
 label secondbedroom:
     show screen crtoverlay
     scene desktopbg
-    show secondbedroom at backgroundpos
+    show bg secondbedroom at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -518,7 +518,7 @@ label secondbedroom:
 label musicroom:
     show screen crtoverlay
     scene desktopbg
-    show musicroom at backgroundpos
+    show bg musicroom at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -528,7 +528,7 @@ label musicroom:
 label ballroom:
     show screen crtoverlay
     scene desktopbg
-    show ballroom at backgroundpos
+    show bg ballroom at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -543,7 +543,7 @@ label ballroom:
 label westupstairs:
     show screen crtoverlay
     scene desktopbg
-    show westupstairs at backgroundpos
+    show bg westupstairs at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -556,6 +556,13 @@ label westupstairs:
         "Return to the ballroom.":
             jump ballroom
 
+#astronomy tower variables
+default owlman_defeated = False
+default inspect_telescope = False
+default telescope_fail = False
+default telescope_success = False
+default telescope_searched = False
+
 label astronomy:
     show screen crtoverlay
     scene desktopbg
@@ -564,12 +571,57 @@ label astronomy:
     $ minimap = True
 
     "This is the astronomy tower. There is a large telescope in the center of the room."
-    jump westupstairs
+    menu:
+        "Look through the telescope":
+            if inspect_telescope == False:
+                "You approach the telescope"
+                call dice_roll
+                if(d20 > 5 and owlman_defeated == False):
+                    #Take sanity damage
+                    "As you look through the telescope you do not see stars, but rather strange creatures and shapes flitting against a dark void."
+                    "You feel a sense of primal revulsion, and are left with a feeling that you saw something you were not meant to see."
+                    "As you process what you've just experienced, you hear an odd noise behind you."
+                    show owlman at characterpos
+                    "This being does not open its mouth to speak.  Its words rattle through your head, yet it speaks in a language unknown to you."
+                    call battle(owlman)
+                    "The odd creature disappears in a flash of light that leaves you momentarily stunned. When you regain your senses it's gone."
+                    $ owlman_defeated = True
+                    $ inspect_telescope = True
+                    jump astronomy
+                elif(d20 <= 5 and owlman_defeated == False):
+                    "As you look through the telescope you feel a sense of wonder and euphoria rush over you.  A sense of discovery and fulfillment you have not felt in some time.  You feel yourself transported across the great expanse of the void, taking in the experiences and comforts of a thousand lifetimes."
+                    "When you pull your head away from the telescope you feel a precense in the room with you."
+                    show owlman at characterpos
+                    "The odd creature before you nods its head towards you.  A gesture of friendship, perhaps?  It disappears in a flash of bright light, leaving you temporarily blinded."  "
+                    When you regain your senses, however; you feel a sense of ease wash over you.  You look around the room and notice an item that was not there before."  
+                    #restore sanity
+                    $ inv.add_item(renpy.random.choice(mid_tier_weapon)))
+                    "A gift from the strange creature. perhaps?"
+                    $ owlman_defeated = True
+                    $ inspect_telescope = True
+                    jump astronomy
+            else: 
+                "You already inspected the telescope."
+                jump astronomy
+
+        "Search the shelves.":
+            call dice_roll
+            if (d20 >= 10):
+                "You find a few helpful goods"
+                $ inv.add_item(renpy.random.choice(tool_list))
+                $ inv.add_item(renpy.random.choice(tool_list))
+                #$ inv.add_item(bandages)
+                jump astronomy
+            else:
+                "You find a few rotted scrolls and books, but nothing else of note."
+                jump astronomy
+        "Leave the room":
+            jump westupstairs
 
 label attic:
     show screen crtoverlay
     scene desktopbg
-    show attic at backgroundpos
+    show bg attic at backgroundpos
     with dissolve
     $ minimap = True
 
@@ -583,7 +635,7 @@ label attic:
 label sceanceroom:
     show screen crtoverlay
     scene desktopbg
-    show sceanceroom at backgroundpos
+    show bg sceanceroom at backgroundpos
     with dissolve
     $ minimap = True
 
