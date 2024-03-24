@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 585: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
+File "game/script.rpy", line 597: unmatched ')'
+    inv.add_item(renpy.random.choice(mid_tier_weapon)))
+                                                       ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Mar 23 10:50:20 2024
+Sat Mar 23 21:02:48 2024

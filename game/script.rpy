@@ -306,7 +306,6 @@ label parlor:
     show bg parlor at backgroundpos
     with dissolve
     $ minimap = True
-    call battle(owlman)
 
     "You are in the parlor. It's a mess."
     jump westhall
@@ -595,7 +594,7 @@ label astronomy:
                     "The odd creature before you nods its head towards you.  A gesture of friendship, perhaps?  It disappears in a flash of bright light, leaving you temporarily blinded."  "
                     When you regain your senses, however; you feel a sense of ease wash over you.  You look around the room and notice an item that was not there before."  
                     #restore sanity
-                    $ inv.add_item(renpy.random.choice(mid_tier_weapon)))
+                    $ inv.add_item(renpy.random.choice(mid_tier_weapon))
                     "A gift from the strange creature. perhaps?"
                     $ owlman_defeated = True
                     $ inspect_telescope = True
