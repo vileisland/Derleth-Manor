@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
+  File "game/script.rpy", line 383, in script
+    $ inv.add_item(alc_list)
+  File "game/script.rpy", line 383, in <module>
+    $ inv.add_item(alc_list)
+  File "game/items.rpy", line 9, in add_item
+    item.recieve()
+AttributeError: 'RevertableList' object has no attribute 'recieve'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 265, in script
-    menu:
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1922, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1072, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 285, in <module>
-    "Inspect sink." if (inspect_sink == False):
-NameError: name 'inspect_sink' is not defined
+  File "game/script.rpy", line 383, in script
+    $ inv.add_item(alc_list)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Vile\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 383, in <module>
+    $ inv.add_item(alc_list)
+  File "game/items.rpy", line 9, in add_item
+    item.recieve()
+AttributeError: 'RevertableList' object has no attribute 'recieve'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 Derleth Manor 1.0
-Mon Mar 18 15:24:27 2024
+Fri Mar 22 13:11:58 2024

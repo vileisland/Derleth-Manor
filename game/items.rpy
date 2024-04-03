@@ -97,6 +97,21 @@ init python:
             super().__init__(name, description, image)
             self.combine = combine
 
+    class Letter(Item):
+        def __init__(self, name, description, image, message):
+            super().__init__(name, description, image)
+            self.message = message
+
+        def recieve(self):
+            renpy.show(self.image, at_list=[self.transform])
+            renpy.say("", what=f"Recieved {self.name}.")
+            renpy.hide(self.image)
+        ##Read letter
+        def use(self):
+            renpy.show(self.image, at_list=[self.transform])
+            renpy.say("", what=f"{self.message}")
+            renpy.hide(self.image) 
+
     ##Food items
     baconcabbagepotatoes = Heal("Bacon, Cabbage, and Potatoes", "A hearty Irish feast.", "baconcabbagepotatoes", 18)
     bangersandmash = Heal("Bangers and Mash", "Delicious British slop.", "bangersandmash", 15)
@@ -124,7 +139,7 @@ init python:
     gin = Sanity("Gin", "Rich in botanicals.", "gin", 15)
 
     ##Medicine
-    bandage = Heal("Bandage", "Perfect for soaking up blood.", "bandage", 30)
+    bandage = Heal("Bandage", "Perfect for soaking up blood.", "bandage", 50)
     chewingtobacco = Sanity("Chewing tobacco", "Better get your spitpot ready.", "chewingtobacco", 20)
     laudenum = Sanity("Laudenum", "Better not abuse it.", "laudenum", 25)
     leeches = Heal("Leeches", "Drains you of bad blood", "leeches", 15)
@@ -149,6 +164,7 @@ init python:
     wrench = Tool("Wrench", "Hey, who needs a plumber?", "wrench", "")
     ##Specific Keys
     ornatekeyparlor = Tool("Ornate key", "This must open something specific.", "ornatekey", "")
+    evelyn_letter = Letter("Evelyn's Letter", "An unsent letter from Evelyn Derleth.", "letter", "Dearest [caretaker_name], Since your departure August's behaviour has become more and more erratic. For your own safety, I beg of you to not return here if anything should happen to me. However, I know you too well to expect you to obey my wishes. I have left something in my 'hiding spot' that I hope will come of aid to you. The code is the day we met. Yours sincerely, Evie.")
 
     ##Weapons
     axe = Weapon("Axe", "Looks sturdy", "axe", 5)

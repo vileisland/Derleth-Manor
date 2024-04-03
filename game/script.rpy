@@ -1,4 +1,11 @@
-﻿
+﻿init python:
+
+    config.underlay.append(
+        renpy.Keymap(
+            mousedown_1 = lambda: renpy.run( renpy.play("click.ogg"))
+        )
+    )
+
 image desktopbg = "desktopbackground.png"
 image splash = "splashlogo.png"
 image fmv = Movie(play="fmv.mpeg")
@@ -118,6 +125,34 @@ label sinclair_conversation:
     hide sinclair
     with dissolve
     "You agreed to take on the perilous mission, tempted by the hefty reward that Sinclair offered. He wasted no time in leaving you alone, as if he wanted to distance himself from matters at hand. You quickly packed your essentials and prepared to face the unknown horrors that awaited you at Derleth Manor."
+    if (charclass == "Priest"):
+        $ inv.add_item(bible)
+        $ inv.add_item(holywater)
+        $ inv.add_item(bandage)
+        $ inv.add_item(baconcabbagepotatoes)
+        $ inv.add_item(beans)
+    if (charclass == "Clairvoyant"):
+        $ inv.add_item(bobbypins)
+        $ inv.add_item(bandage)
+        $ inv.add_item(meatpie)
+        $ inv.add_item(sardines)
+    if (charclass == "Journalist"):
+        $ inv.add_item(parchment)
+        $ inv.add_item(bandage)
+        $ inv.add_item(bourbon)
+        $ inv.add_item(cannedmeat)
+    if (charclass == "Investigator"):
+        $ inv.add_item(pistol)
+        $ inv.add_item(lighter)
+        $ inv.add_item(bandage)
+        $ inv.add_item(bangersandmash)
+        $ inv.add_item(bread)
+    if (charclass == "Scholar"):
+        $ inv.add_item(bobbypins)
+        $ inv.add_item(bandage)
+        $ inv.add_item(pills)
+        $ inv.add_item(cannedmeat)
+        $ inv.add_item(sardines)
     jump maingate
 
 
@@ -202,7 +237,7 @@ label mainhall:
             jump easthall
         "Flee in terror" if (flee_attempt == False):
             "You try with all your strength, but the door is locked tight. You're trapped in here."
-            $ currentsanity - 10
+            $ currentsanity -= 10
             $ renpy.notify("Lost 10 Sanity.")
             $ flee_attempt = True
             jump mainhall
@@ -241,16 +276,16 @@ label westhall:
 default tony_defeated = False
 default fridge_empty = False
 default inspect_sink = False
-default sink_success = False
 default sink_searched = False
+default cupboard_searched = False
 
 label kitchen:
+    play sound "click.wav"
     show screen crtoverlay
     scene desktopbg
     show bg kitchen at backgroundpos
     with dissolve
     $ minimap = True
-
     call dice_roll
     if (d20 > 15 and tony_defeated == False):
         "You see a dark figure rustling through the fridge!"
@@ -260,7 +295,7 @@ label kitchen:
         "With Tony disposed of, you gleefully pick up your hard earned coldcuts."
         $ inv.add_item(coldcuts)
         $ tony_defeated = True
-        
+    
     "This is the kitchen. The fridge is wide open. The sink is full of dirty water."
     menu:
         "Search the fridge.":
@@ -275,9 +310,10 @@ label kitchen:
                 "You've already plundered the fridge."
                 jump kitchen
         "Search the cupboards.":
-            if per > 6:
+            if per > 6 and cupboard_searched == False:
                 "You find a roll of bandages behind an empty box of cornflakes."
-                $ inv.add_item(bandages)
+                $ inv.add_item(bandage)
+                $ cupboard_searched = True
                 jump kitchen
             else:
                 "You find nothing useful."
@@ -285,12 +321,12 @@ label kitchen:
         "Inspect sink." if (inspect_sink == False):
             if per > 6:
                 "You look into the dirty water and notice something glistening at the bottom of the sink."
-                $ sink_success = True
+                $ inspect_sink = True
                 jump kitchen
             else:
                 "It's full of dirty sink water. Big whoop!"
                 jump kitchen
-        "Search the sink." if (sink_success == True and sink_searched == False):
+        "Search the sink." if (inspect_sink == True and sink_searched == False):
             "You plunge your hand into the disgusting water. Yuck, something slimey touched your hand. You resist the urge to scream and suddenly you feel something metal. You grasp your prize and pull out an old key."
             $ sink_searched = True
             $ inv.add_item(ornatekeyparlor)
@@ -298,7 +334,8 @@ label kitchen:
         "Return to the West Hall.":
             jump westhall
 
-
+default fireplace_inspected = False
+default parlor_cabinet_inspected = False
 
 label parlor:
     show screen crtoverlay
@@ -306,10 +343,48 @@ label parlor:
     show bg parlor at backgroundpos
     with dissolve
     $ minimap = True
-    call battle(owlman)
 
-    "You are in the parlor. It's a mess."
-    jump westhall
+    "You are in the parlor. The walls are adorned with unsettling paintings, and you can feel a slight draft coming from the fireplace."
+    menu:
+        "Inspect the paintings.":
+            call dice_roll
+            if d4 == 1:
+                show strangepainting at characterpos
+                "The painting depicts a man surrounded by otherworldly monstrosities. Why anyone would want this on display is utterly beyond you."
+                $ renpy.notify("Lost 5 sanity.")
+                $ currentsanity -= 5
+                jump parlor
+            if d4 == 2:
+                show menacingpainting at characterpos
+                "A family portrait. One of their faces is contorted into a ghastly grimace. Something isn't right."
+                $ renpy.notify("Lost 5 sanity.")
+                $ currentsanity -= 5
+                jump parlor
+            if d4 == 3:
+                show derlethpainting at characterpos
+                "A painting of August and Evelyn Derleth. Finally, a face to put to the name."
+                jump parlor
+            if d4 == 4:
+                call battle(hauntedportrait)
+                jump parlor
+        "Inspect the fireplace." if fireplace_inspected == False:
+            "The draft emanating from the fireplace chills your very bones."
+            if per > 5:
+                "You spy a gap between the ornate woodwork of the fireplace's mantle. You slide your fingers across the mantle and feel a raised button in the center of a carving of a rose. You hear a loud click as you press it down and a hidden compartment opens."
+                $ inv.add_item(evelyn_letter)
+                $ fireplace_inspected = True
+                jump parlor
+            else:
+                "You notice nothing out of the ordinary about the fireplace."
+                $ fireplace_inspected = True
+                jump parlor
+        "Inspect the cabinet.":
+            "You search through the cabinet."
+            $ inv.add_item(renpy.random.choice(alc_list))
+            $ inv.add_item(renpy.random.choice(med_list))
+            jump parlor
+        "Return to the West Hall.":
+            jump westhall
 
 label diningroom:
     show screen crtoverlay
@@ -319,9 +394,6 @@ label diningroom:
     $ minimap = True
 
     "You are in the dining room."
-    $ inv.add_item(bandage)
-    $ inv.add_item(bangersandmash)
-    $ inv.add_item(axe)
     jump westhall
 
 label servantsquarters:

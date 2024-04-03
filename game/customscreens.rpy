@@ -4,17 +4,17 @@ screen hud():
     imagebutton idle "characterstats.png":
         focus_mask None
         pos (10, 100)
-        action Show("stats")
+        action Play("sound", "click.ogg"), Show("stats")
 
     imagebutton idle "map.png":
         focus_mask None
         pos(10, 261)
-        action Show("status"), Hide("hud")
+        action Play("sound", "click.ogg"), Show("status"), Hide("hud")
 
     imagebutton idle "inventory.png":
         focus_mask None
         pos (10, 422)
-        action Show("inventory")
+        action Play("sound", "click.ogg"), Show("inventory")
 
 
 screen inventory():
@@ -23,15 +23,23 @@ screen inventory():
 
     vbox:
         pos 0.2, 0.10
+        text "Key Items:"
+        text " "
         for item in inv.items:
-            #text "[item.name] - [item.description]"
-            textbutton ("[item.name] - [item.description]"):
-                action Hide("inventory"), Call("use_item", item)
+            if isinstance(item, (Tool)):
+                text " [item.name] - [item.description]"
+        text " "
+        text "Useables:"
+        text " "
+        for item in inv.items:
+            if isinstance(item, (Heal, Sanity, Weapon, Letter)):
+                textbutton ("[item.name] - [item.description]"):
+                    action Play('sound', 'click.ogg'), Hide("inventory"), Call("use_item", item, from_current=True)
         
 
     imagebutton idle "closebutton.png":
         focus_mask None
-        action Hide("inventory"), Show("hud")
+        action Play("sound", "click.ogg"), Hide("inventory"), Show("hud")
 
 screen stats():
     modal True
@@ -56,4 +64,4 @@ screen stats():
 
     imagebutton idle "closebutton.png":
         focus_mask None
-        action Hide("stats"), Show("hud")
+        action Play("sound", "click.ogg"), Hide("stats"), Show("hud")

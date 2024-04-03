@@ -148,7 +148,7 @@ screen status():
             ypos -89
             xpos 284
             focus_mask None
-            action Hide("showMap"), Hide("status"), Show("hud")
+            action Play("sound", "click.ogg"), Hide("showMap"), Hide("status"), Show("hud")
         use map
 
 ## Minimap
