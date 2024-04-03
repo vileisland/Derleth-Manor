@@ -34,53 +34,55 @@ define locations = {
 
     "attic" : {"name":_("The Attic"), "area":2, "pos":( 0, 0)},
 
-    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(0, 0)},
+    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(412, 225)},
 
-    "barroom" : {"name":_("The Barroom"), "area":1, "pos":(1374, 502)},
+    "barroom" : {"name":_("The Barroom"), "area":1, "pos":(1470, 510)},
 
-    "bathroom" : {"name":_("Bathroom"), "area":1, "pos":(1435, 346)},
+    "bathroom" : {"name":_("Bathroom"), "area":1, "pos":(1350, 335)},
 
-    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(0, 0)},
+    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(733, 136)},
 
-    "diningroom" : {"name":_("Dining Room"), "area":1, "pos":(918,352)},
+    "diningroom" : {"name":_("Dining Room"), "area":1, "pos":(910, 350)},
 
-    "easthall" : {"name":_("The Eastern Hall"), "area":1, "pos":(1392, 423)},
+    "easthall" : {"name":_("The Eastern Hall"), "area":1, "pos":(1450, 410)},
 
-    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(0, 0)},
+    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(707, 226)},
 
-    "garden" : {"name":_("Garden"), "area":1, "pos":(331, 438)},
+    "garden" : {"name":_("Garden"), "area":1, "pos":(320, 405)},
 
-    "graveyard" : {"name":_("Graveyard"), "area":1, "pos":(138, 438)},
+    "graveyard" : {"name":_("Graveyard"), "area":1, "pos":(130, 405)},
 
-    "greenhouse" : {"name":_("Greenhouse"), "area":1, "pos":(555, 420)},
+    "greenhouse" : {"name":_("Greenhouse"), "area":1, "pos":(525, 405)},
 
-    "kitchen" : {"name":_("Kitchen"), "area":1, "pos":(733, 481)},
+    "kitchen" : {"name":_("Kitchen"), "area":1, "pos":(725, 510)},
 
     "maingate" : {"name":_("The Main Gate"), "area":1, "pos":(500,160)},
 
-    "mainhall" : {"name":_("The Main Hall"), "area":1, "pos":(1116, 550)},
+    "mainhall" : {"name":_("The Main Hall"), "area":1, "pos":(1110, 470)},
 
-    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(0, 0)},
+    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(603, 126)},
 
-    "nursery" : {"name":_("Nursery"), "area":2, "pos":(0, 0)},
+    "nursery" : {"name":_("Nursery"), "area":2, "pos":(735, 335)},
 
     "parlor" : {"name":_("The Parlor"), "area":1, "pos":(860, 480)},
 
     "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(0, 0)},
 
-    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(0, 0)},
+    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(603, 337)},
 
-    "servantsbedroom" : {"name":_("Servant's Bedroom"), "area":1, "pos":(657, 370)},
+    "servantsbedroom" : {"name":_("Servant's Bedroom"), "area":1, "pos":(660, 345)},
 
-    "shed" : {"name":_("The Shed"), "area":1, "pos":(222, 319)},
+    "servantsquarters" : {"name":_("Servant's Quarters"), "area":1, "pos":(780, 340)},
 
-    "storageroom" : {"name":_("Storage Room"), "area":1, "pos":(658, 291)},
+    "shed" : {"name":_("The Shed"), "area":1, "pos":(210, 275)},
 
-    "study" : {"name":_("Study"), "area":1, "pos":(1303, 366)},
+    "storageroom" : {"name":_("Storage Room"), "area":1, "pos":(655, 260)},
 
-    "westhall" : {"name":_("The West Hall"), "area":1, "pos":(886, 415)},
+    "study" : {"name":_("Study"), "area":1, "pos":(1550, 350)},
 
-    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(0, 0)},
+    "westhall" : {"name":_("The West Hall"), "area":1, "pos":(790, 405)},
+
+    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(189, 222)},
     }
 
 
@@ -169,7 +171,6 @@ screen minimap():
     if minimap and preferences.show_minimap and area != None:
 
         fixed pos minimap_offset,minimap_offset xysize config.screen_width-2*minimap_offset, config.screen_height-2*minimap_offset-gui.textbox_height:
-
             fixed fit_first True xalign minimap_position[0] yalign minimap_position[1]:
                 frame:
                     use map(scale=preferences.minimap_size, minimap=True)
