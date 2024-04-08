@@ -765,10 +765,6 @@ label battle(enemy):
                     "Critical Hit! [player_attack] damage to [enemy.name]!"
                 else:
                     "[enemy.name] dodges the attack."
-            "Skip Fight":
-                $ enemyHP = 0
-            "Pass":
-                "You do nothing."
 
         if enemyHP <= 0:
             "[enemy.name] defeated!"
