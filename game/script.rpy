@@ -251,7 +251,7 @@ label westhall:
     with dissolve
     $ minimap = True
     call dice_roll
-    if (d20 > 14):
+    if (d20 > 16):
         call battle(renpy.random.choice(easyenemies))
 
     "You are in the west hallway. There are two doors to your left, two to your right, and on down the hall."
@@ -441,6 +441,9 @@ label greenhouse:
     $ minimap = True
 
     "You are in the greenhouse."
+    call dice_roll
+    if (d20 > 16):
+        call battle(renpy.random.choice(easyenemies))
     menu:
         "Venture outside.":
             jump garden
@@ -491,7 +494,10 @@ label easthall:
     with dissolve
     $ minimap = True
 
-    "This is the east hallway. There are two doors to your left and one to your right. There is a staircase leading upstairs at the ened of the hall."
+    call dice_roll
+    if (d20 > 16):
+        call battle(renpy.random.choice(easyenemies))
+    "This is the east hallway. There are two doors to your left and one to your right. There is a staircase leading upstairs at the end of the hall."
     menu:
         "Go to the bathroom.":
             jump bathroom
@@ -542,6 +548,9 @@ label eastupstairs:
     with dissolve
     $ minimap = True
 
+    call dice_roll
+    if (d20 > 16):
+        call battle(renpy.random.choice(easyenemies))
     "You are in the upstairs east hallway. There are two doors on each side of you and a door in front of you."
     menu:
         "Go to the master bedroom":
@@ -619,7 +628,10 @@ label westupstairs:
     with dissolve
     $ minimap = True
 
-    "There is one doors here. I haven't thought of any locations for it. Ignore it. There is a ladder to the attic ahead of you and a door to your right."
+    call dice_roll
+    if (d20 > 16):
+        call battle(renpy.random.choice(easyenemies))
+    "There is a door to the Astronomy tower, a ladder to the attic ahead of you and a door to your right."
     menu:
         "Enter the Astronomy Tower.":
             jump astronomy
@@ -697,6 +709,9 @@ label attic:
     with dissolve
     $ minimap = True
 
+    call dice_roll
+    if (d20 > 16):
+        call battle(renpy.random.choice(easyenemies))
     "You are in the attic. There is a door in front of you."
     menu:
         "Enter the door.":
