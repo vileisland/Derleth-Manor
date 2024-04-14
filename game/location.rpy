@@ -1,5 +1,6 @@
 
 #Location images
+image bg astronomytower = "/images/locations/astronomytower.png"
 image bg attic = "/images/locations/attic.png"
 image bg ballroom = "/images/locations/ballroom.png"
 image bg barroom = "/images/locations/barroom.png"
@@ -30,9 +31,9 @@ image bg westupstairs = "/images/locations/westupstairs.png"
 
 
 define locations = {
-    "astronomytower" : {"name":_("Astronomy Tower"), "area":2, "pos":( 0, 0)},
+    "astronomytower" : {"name":_("Astronomy Tower"), "area":2, "pos":( 565, 520)},
 
-    "attic" : {"name":_("The Attic"), "area":2, "pos":( 0, 0)},
+    "attic" : {"name":_("The Attic"), "area":2, "pos":( 550, 407)},
 
     "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(770, 420)},
 
@@ -66,7 +67,7 @@ define locations = {
 
     "parlor" : {"name":_("The Parlor"), "area":1, "pos":(860, 480)},
 
-    "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(0, 0)},
+    "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(550, 407)},
 
     "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(965, 300)},
 

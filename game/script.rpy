@@ -650,7 +650,7 @@ default telescope_searched = False
 label astronomy:
     show screen crtoverlay
     scene desktopbg
-    show astronomytower at backgroundpos
+    show bg astronomytower at backgroundpos
     with dissolve
     $ minimap = True
 
