@@ -138,6 +138,7 @@ define config.all_character_callbacks = [ update_location ]
 ## Screens
 
 screen status():
+    modal True
     tag menu
     on "show" action SetVariable("current_area", locations[current_location]["area"])
     
@@ -146,7 +147,7 @@ screen status():
         text locations[current_location]["name"]:
             ypos -70
             xpos 750
-        imagebutton idle "closebutton.png":
+        imagebutton idle "closebuttonmap.png":
             ypos -89
             xpos 284
             focus_mask None
