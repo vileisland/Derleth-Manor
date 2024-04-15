@@ -1,5 +1,6 @@
 
 #Location images
+image bg astronomytower = "/images/locations/astronomytower.png"
 image bg attic = "/images/locations/attic.png"
 image bg ballroom = "/images/locations/ballroom.png"
 image bg barroom = "/images/locations/barroom.png"
@@ -30,23 +31,23 @@ image bg westupstairs = "/images/locations/westupstairs.png"
 
 
 define locations = {
-    "astronomytower" : {"name":_("Astronomy Tower"), "area":2, "pos":( 0, 0)},
+    "astronomytower" : {"name":_("Astronomy Tower"), "area":2, "pos":( 565, 520)},
 
-    "attic" : {"name":_("The Attic"), "area":2, "pos":( 0, 0)},
+    "attic" : {"name":_("The Attic"), "area":2, "pos":( 550, 407)},
 
-    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(412, 225)},
+    "ballroom" : {"name":_("The Ballroom"), "area":2, "pos":(770, 420)},
 
     "barroom" : {"name":_("The Barroom"), "area":1, "pos":(1470, 510)},
 
     "bathroom" : {"name":_("Bathroom"), "area":1, "pos":(1350, 335)},
 
-    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(733, 136)},
+    "bedroom" : {"name":_("Bedroom"), "area":2, "pos":(1095, 300)},
 
     "diningroom" : {"name":_("Dining Room"), "area":1, "pos":(910, 350)},
 
     "easthall" : {"name":_("The Eastern Hall"), "area":1, "pos":(1450, 410)},
 
-    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(707, 226)},
+    "eastupstairs" : {"name":_("Eastern Upstairs"), "area":2, "pos":(1070, 405)},
 
     "garden" : {"name":_("Garden"), "area":1, "pos":(320, 405)},
 
@@ -60,15 +61,15 @@ define locations = {
 
     "mainhall" : {"name":_("The Main Hall"), "area":1, "pos":(1110, 470)},
 
-    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(603, 126)},
+    "musicroom" : {"name":_("Music Room"), "area":2, "pos":(960, 510)},
 
-    "nursery" : {"name":_("Nursery"), "area":2, "pos":(735, 335)},
+    "nursery" : {"name":_("Nursery"), "area":2, "pos":(1100, 510)},
 
     "parlor" : {"name":_("The Parlor"), "area":1, "pos":(860, 480)},
 
-    "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(0, 0)},
+    "sceanceroom" : {"name":_("Sceance Room"), "area":2, "pos":(550, 407)},
 
-    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(603, 337)},
+    "secondbedroom" : {"name":_("Second Bedroom"), "area":2, "pos":(965, 300)},
 
     "servantsbedroom" : {"name":_("Servant's Bedroom"), "area":1, "pos":(660, 345)},
 
@@ -82,7 +83,7 @@ define locations = {
 
     "westhall" : {"name":_("The West Hall"), "area":1, "pos":(790, 405)},
 
-    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(189, 222)},
+    "westupstairs" : {"name":_("Western Upstairs"), "area":2, "pos":(550, 407)},
     }
 
 
